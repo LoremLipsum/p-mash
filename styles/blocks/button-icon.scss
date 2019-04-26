@@ -1,0 +1,45 @@
+.button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  text-decoration: none;
+
+  @include hover {
+    .button-icon__icon {
+      fill: rgba(color(white), 0.7);
+    }
+  }
+
+  &--bg-primary {
+    background-color: color(primary);
+
+    @include hover {
+      background-color: darken(color(primary), $change);
+    }
+  }
+
+  &--bg-gray {
+    background-color: color(gray);
+
+    @include hover {
+      background-color: darken(color(gray), $change);
+    }
+  }
+}
+
+.button-icon__icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: color(white);
+}
+
+@include respond-to(large) {
+  .button-icon {
+    min-height: 46px;
+    min-width: 46px;
+  }
+}

@@ -1,0 +1,133 @@
+.button {
+  display: block;
+  flex-shrink: 0;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--large,
+  &--small,
+  &--color-primary {
+    text-align: center;
+  }
+
+  &--large {
+    padding: 15px 32px;
+    border-radius: 28px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &--small {
+    padding: 10px 30px;
+    border-radius: 23px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &--bg-primary,
+  &--bg-disabled {
+    color: color(white);
+  }
+
+  &:disabled,
+  &--bg-disabled,
+  &--border-disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &--bg-disabled {
+    border: 2px solid color(light-gray);
+    background-color: color(light-gray);
+  }
+
+  &--bg-primary {
+    border: 2px solid color(primary);
+    background-color: color(primary);
+
+    @include hover {
+      border-color: darken(color(primary), $change);
+      background-color: darken(color(primary), $change);
+    }
+  }
+
+  &--border-disabled {
+    border: 2px solid color(light-gray);
+    color: color(light-gray);
+  }
+
+  &--border-primary {
+    border: 2px solid color(primary);
+    color: color(primary);
+
+    @include hover {
+      background-color: color(primary);
+      color: color(white);
+    }
+  }
+
+  &--submit {
+    display: block;
+  }
+
+  &--color-primary {
+    color: color(primary);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    .button__icon {
+      fill: color(primary);
+    }
+
+    @include hover {
+      opacity: 0.6;
+    }
+  }
+
+  &--with-icon-after,
+  &--with-icon-before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--with-icon-after {
+    .button__icon {
+      margin-left: 15px;
+    }
+  }
+
+  &--with-icon-before {
+    .button__icon {
+      margin-right: 15px;
+    }
+  }
+}
+
+.button__icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+@include respond-to(medium) {
+  .button {
+    &--large {
+      padding: 17px 36px;
+      border-radius: 30px;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .button {
+    &--large {
+      padding: 19px 40px;
+      border-radius: 31px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@import "../assets/fonts/myriadpro/myriadpro";
+@import "../assets/fonts/gothampro/gothampro";
 @import "./libs/normalize";
 @import "./libs/slick";
 @import "./libs/animate";
@@ -13,3 +13,45 @@
 @import "./blocks/article";
 @import "./blocks/sticky-footer";
 @import "./blocks/content";
+@import "../pug/blocks/checkbox/checkbox";
+@import "../pug/blocks/phone/phone";
+@import "../pug/blocks/overlay/overlay";
+@import "../pug/blocks/button-nav/button-nav";
+@import "../pug/blocks/button-down/button-down";
+@import "../pug/blocks/button-control/button-control";
+@import "../pug/blocks/button-close/button-close";
+@import "../pug/blocks/checkbox-confirm/checkbox-confirm";
+@import "../pug/blocks/logo/logo";
+@import "../pug/blocks/main-nav/main-nav";
+@import "../pug/blocks/button/button";
+@import "../pug/blocks/header/header";
+@import "../pug/blocks/button-icon/button-icon";
+@import "../pug/blocks/social/social";
+@import "../pug/blocks/search/search";
+@import "../pug/blocks/callback/callback";
+@import "../pug/blocks/form/form";
+@import "../pug/blocks/field/field";
+
+@import "../pug/blocks/intro/intro";
+@import "../pug/blocks/footer/footer";
+@import "../pug/blocks/process-item/process-item";
+@import "../pug/blocks/process/process";
+
+@import "../pug/blocks/process-circle/process-circle";
+@import "../pug/blocks/circle-small/circle-small";
+@import "../pug/blocks/circle-large/circle-large";
+
+@import "../pug/blocks/statistic/statistic";
+@import "../pug/blocks/statistic-item/statistic-item";
+@import "../pug/blocks/statistic-circle/statistic-circle";
+@import "../pug/blocks/service/service";
+@import "../pug/blocks/service-item/service-item";
+@import "../pug/blocks/service-circle/service-circle";
+@import "../pug/blocks/writeus/writeus";
+
+@import "../pug/blocks/features/features";
+@import "../pug/blocks/features-item/features-item";
+@import "../pug/blocks/catalog-nav/catalog-nav";
+@import "../pug/blocks/catalog-slider/catalog-slider";
+@import "../pug/blocks/catalog-item/catalog-item";
+@import "../pug/blocks/catalog/catalog";

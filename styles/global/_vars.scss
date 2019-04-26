@@ -1,5 +1,5 @@
 $fonts: (
-  primary: #{"Myriad Pro", "Pragmatica", "Roboto", sans-serif, "Nimbus Sans L", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
+  primary: #{"Gotham Pro", "Helvetica", "Pragmatica", "Arial", sans-serif, "Nimbus Sans L", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
 );
 
 $breakpoints: (
@@ -11,7 +11,7 @@ $breakpoints: (
 );
 
 $pads: (
-  small: 30px,
+  small: 20px,
   medium: 30px,
   large: 40px,
 );
@@ -20,17 +20,17 @@ $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 $colors: (
-  primary: #0291c9,
-  secondary: #077bad,
-  light: #f7f7f5,
-  dark-light: #dfdfdc,
-  light-gray: #c9c9c6,
-  gray: #999,
-  dark-gray: #ababab,
-  black: #333,
+  primary: #70af4a,
+  light: #f2f2f3,
+  gray: #545764,
+  light-gray: #e4e4e6,
+  dark-gray: #474955,
+  black: #474955,
   white: #fff,
   error: #d0021b,
   disabled: #c9c9c6,
+  border: #c7c8cc,
+  light-border: #ececee,
 );
 
 // время анимаций
@@ -41,7 +41,8 @@ $durations: (
 
 // для бордер-радиусов
 $radius: (
-  sm: 5px,
+  sm: 4px,
+  md: 8px,
 );
 
 $func: (
@@ -49,9 +50,9 @@ $func: (
 );
 
 $mb: (
-  sm: 20px,
-  md: 22px,
-  lg: 24px,
+  sm: 16px,
+  md: 18px,
+  lg: 22px,
 );
 
-$change-color: 5%;
+$change: 8%;

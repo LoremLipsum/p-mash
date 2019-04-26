@@ -1,0 +1,39 @@
+.statistic-item {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.statistic-item__circle {
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.statistic-item__text {
+  display: block;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@include respond-to(small-lg) {
+  .statistic-item {
+
+
+  }
+
+  .statistic-item__text {
+    font-size: 18px;
+  }
+}
+
+@include respond-to(large) {
+  .statistic-item__text {
+    font-size: 20px;
+  }
+
+  .statistic-item__circle {
+    margin-bottom: 20px;
+  }
+}

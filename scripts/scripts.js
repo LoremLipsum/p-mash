@@ -11,6 +11,30 @@
 
 })();
 
+$(document).ready(function (){
+  var btn = $('.js-button-down');
+  var content = $('.js-down');
+
+  btn.click(function (){
+    $('html, body').animate({
+      scrollTop: content.offset().top
+    }, 500);
+  });
+});
+
+'use strict';
+
+(function() {
+  var btn = document.querySelector('.js-catalog-nav-button');
+
+  if(btn) {
+    btn.addEventListener('click', function(e) {
+      e.currentTarget.parentNode.classList.toggle('active');
+    });
+  }
+
+})();
+
 'use strict';
 
 (function() {
@@ -31,27 +55,65 @@
 
 })();
 
+$(document).ready(function (){
+  var header = $('.js-top-header');
+  var SCROLL_HEIGHT = 200;
+
+  $(window).scroll(function(){
+    if ( $(this).scrollTop() > SCROLL_HEIGHT ){
+      header.addClass('active');
+    } else if($(this).scrollTop() <= SCROLL_HEIGHT && header.hasClass('active')) {
+      header.removeClass('active');
+    }
+  });
+});
+
+objectFitImages();
+svg4everybody();
+picturefill();
+new WOW().init();
+
 'use strict';
 
 (function() {
 
-  var block = document.querySelector('.js-main-nav');
-  var btn = document.querySelector('.js-button-nav');
+  var dialog = document.querySelector('.js-main-nav');
+  // var btnToggle = document.querySelector('.js-toggle-nav');
+  var btnOpen = document.querySelector('.js-open-nav');
+  var btnClose = document.querySelector('.js-close-nav');
+  var overlay = document.querySelector('.js-main-nav-overlay');
   var ESC = 27;
 
-  var toggle = function() {
-    block.classList.toggle('active');
-    btn.classList.toggle('active');
+  var open = function() {
+    dialog.classList.add('active');
+    overlay.classList.add('active');
   };
 
+  // var toggle = function() {
+  //   dialog.classList.toggle('active');
+  //   btnToggle.classList.toggle('active');
+  //   overlay.classList.toggle('active');
+  // };
+
   var close = function() {
-    block.classList.remove('active');
-    btn.classList.remove('active');
+    dialog.classList.remove('active');
+    overlay.classList.remove('active');
+    // btnToggle.classList.remove('active');
   }
 
-  var onBtnClick = function(e) {
+  var onOpenClick = function(e) {
+    e.preventDefault();
+    open();
+  };
+
+  var onToggleClick = function(e) {
     e.preventDefault();
     toggle();
+  };
+
+  var onCloseClick = function(e) {
+    e.preventDefault();
+    close();
   };
 
   var onEscKeyup = function(e) {
@@ -61,15 +123,13 @@
     }
   };
 
-  btn.addEventListener('click', onBtnClick);
+  // btnToggle.addEventListener('click', onToggleClick);
+  btnOpen.addEventListener('click', onOpenClick);
+  overlay.addEventListener('click', onCloseClick);
+  btnClose.addEventListener('click', onCloseClick);
   document.addEventListener('keyup', onEscKeyup);
 
 })();
-
-objectFitImages();
-svg4everybody();
-picturefill();
-new WOW().init();
 
 (function($) {
 	'use strict';
@@ -92,41 +152,31 @@ new WOW().init();
 	'use strict';
 	$(function() {
 
-    $('.slider-company').slick({
+    $('.js-catalog-slider').slick({
       arrows: true,
       dots: false,
-      slidesToShow: 5,
+      slidesToShow: 3,
       slidesToScroll: 1,
       swipeToSlide: true,
       autoplay: true,
 			autoplaySpeed: 5000,
       infinite: true,
-      prevArrow: '<button class="control control--prev" type="button" tabindex="0" aria-lable="Назад"><svg class="control__icon" width="30" height="20"><use xlink:href="assets/images/sprites/sprite.svg#arrow"></use></svg></button>',
-      nextArrow: '<button class="control control--next" type="button" tabindex="0" aria-lable="Вперёд"><svg class="control__icon" width="30" height="20"><use xlink:href="assets/images/sprites/sprite.svg#arrow"></use></svg></button>',
+       adaptiveHeight: true,
+      prevArrow: '<button class="control control--prev" type="button" tabindex="0" aria-lable="Назад"></button>',
+      nextArrow: '<button class="control control--next" type="button" tabindex="0" aria-lable="Вперёд"></button>',
       responsive: [
         {
-          breakpoint: 1120,
+          breakpoint: 1220,
           settings: {
-            slidesToShow: 4,
+            slidesToShow: 2,
           }
         },
         {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 3,
-            centerMode: false,
-            variableWidth: false,
-          }
-        },
-        {
-          breakpoint: 580,
+          breakpoint: 920,
           settings: {
             slidesToShow: 1,
-            centerMode: true,
-            variableWidth: true,
           }
         },
-
       ]
     });
 

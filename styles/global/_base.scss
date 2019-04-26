@@ -4,7 +4,6 @@ html {
   min-width: breakpoints(small);
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body {
@@ -15,6 +14,7 @@ body {
   font-style: normal;
   font-weight: 400;
   color: color(black);
+  overflow-x: hidden;
 }
 
 html {
@@ -27,13 +27,14 @@ html {
   box-sizing: inherit;
 }
 
-* {
-  outline: none;
-}
-
 @include respond-to(medium) {
+  body {
+    font-size: 15px;
+  }
 }
 
 @include respond-to(large) {
-
+  body {
+    font-size: 16px;
+  }
 }

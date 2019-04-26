@@ -1,0 +1,65 @@
+.service {
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.service__wrap {
+  @include wrapper;
+}
+
+.service__list {
+  padding: 0;
+  @include ul-no;
+}
+
+.service__item {
+  margin-bottom: 20px;
+}
+
+.service__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+}
+
+@include respond-to(small-lg) {
+  .service__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service__item {
+    width: 50%;
+  }
+}
+
+@include respond-to(medium) {
+  .service {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .service__item {
+    width: 25%;
+  }
+
+  .service__heading {
+    margin-bottom: 25px;
+    font-size: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .service {
+    padding: 55px;
+    padding-bottom: 55px;
+  }
+
+  .service__heading {
+    margin-bottom: 45px;
+    font-size: 36px;
+  }
+}

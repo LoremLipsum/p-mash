@@ -1,0 +1,51 @@
+.process-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  width: 114px;
+  height: 114px;
+  border: 2px solid color(primary);
+  border-radius: 50%;
+  background-color: color(primary);
+  background-clip: content-box;
+
+  &--to-right-shift {
+    .process-circle__icon {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.process-circle__icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  fill: color(white);
+}
+
+@include respond-to(medium) {
+  .process-circle {
+    padding: 7px;
+    width: 124px;
+    height: 124px;
+  }
+
+  .process-circle__icon {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@include respond-to(large) {
+  .process-circle {
+    padding: 8px;
+    width: 134px;
+    height: 134px;
+  }
+
+  .process-circle__icon {
+    width: 56px;
+    height: 56px;
+  }
+}

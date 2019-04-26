@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>Бандит</title>
+    <title>ПродМаш</title>
     <meta name="description" content="Официальный дилер строительной техники в Респ. Башкортостан, Татарстан, Поволжье, Урале">
     <meta name="keywords" content="Строительная техника, Эскаваторы, Фронтальные погрузчики, Погрузчики вилочные, Погрузчики телескопические, Погрузчики с бортовым поворотом, Самосвалы Moxy, Перегружатели, Разрушители зданий, Техника для уборки помещений">
     <meta name="format-detection" content="telephone=no">
@@ -12,7 +12,619 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
-    <main></main>
+    <header class="header">
+      <div class="header__top js-top-header">
+        <div class="header__wrap">
+          <div class="header__top-inner">
+            <div class="header__top-column">
+              <button class="btn-nav header__button-nav js-open-nav" aria-label="Открыть меню" type="button">
+                <span class="btn-nav__icon">
+                  <span class="btn-nav__lines">
+                  </span>
+                </span>
+              </button>
+            </div>
+            <a class="logo logo--small header__logo-small">
+              <img class="logo__image" src="./assets/images/logo-small.svg" alt=" ">
+            </a>
+            <div class="header__top-column">
+              <ul class="header__list header__list--top">
+                <li class="header__item">
+                  <button class="button-icon button-icon--bg-primary" title="Поиск" type="button">
+                    <svg class="button-icon__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="header__item">
+                  <button class="button-icon button-icon--bg-gray" title="Позвонить" type="button">
+                    <svg class="button-icon__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#phone"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__middle">
+        <div class="header__wrap">
+          <div class="header__middle-inner">
+            <a class="logo header__logo">
+              <img class="logo__image" src="./assets/images/logo-primary.svg" alt=" ">
+            </a>
+            <div class="header__info">Производство технологического <br>оборудования <br>для консервных производств</div>
+            <div class="header__address header__address--middle">Московская область <br>Люберецкий район <br>ул. Ленина, 52, оф. 324</div>
+            <ul class="header__list header__list--middle">
+              <li class="header__item">
+                <button class="button-icon button-icon--bg-primary" title="Поиск" type="button">
+                  <svg class="button-icon__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="header__item">
+                <button class="button-icon button-icon--bg-gray" title="Позвонить" type="button">
+                  <svg class="button-icon__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#phone"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+            <div class="header__contacts header__contacts--middle">
+              <a class="phone" href="#">+7 (929) <span class="phone__number">540-71-24</span>
+              </a>
+              <a class="phone" href="#">+7 (499) <span class="phone__number">281-69-44</span>
+              </a>
+              <a class="header__email" href="mailto:tdpmts2016@mail.ru">tdpmts2016@mail.ru
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__wrap">
+          <nav class="header__dialog js-main-nav" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <button class="button-close header__button-close js-close-nav" aria-label="Закрыть окно" type="button">
+              <span class="button-close__icon">
+              </span>
+            </button>
+            <ul class="main-nav header__main-nav">
+              <li class="main-nav__item active" itemprop="name">
+                <a class="main-nav__link" href="page-about.html" itemprop="url">О компании
+                </a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a class="main-nav__link" href="page-equipment.html" itemprop="url">Оборудование
+                </a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a class="main-nav__link" href="page-service.html" itemprop="url">Услуги
+                </a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a class="main-nav__link" href="page-news.html" itemprop="url">Новости
+                </a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a class="main-nav__link" href="page-posts.html" itemprop="url">Статьи
+                </a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a class="main-nav__link" href="page-contacts.html" itemprop="url">Контакты
+                </a>
+              </li>
+            </ul>
+            <div class="header__address header__address--bottom">Московская область Люберецкий район ул. Ленина, 52, оф. 324</div>
+            <div class="header__contacts header__contacts--bottom">
+              <a class="phone" href="#">+7 (929) <span class="phone__number">540-71-24</span>
+              </a>
+              <a class="phone" href="#">+7 (499) <span class="phone__number">281-69-44</span>
+              </a>
+              <a class="header__email" href="mailto:tdpmts2016@mail.ru">tdpmts2016@mail.ru
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="overlay header__overlay js-main-nav-overlay">
+      </div>
+    </header>
+    <main>
+      <section class="intro">
+        <div class="intro__wrap">
+          <h1 class="intro__heading">Разрабатываем, производим <br>и&nbsp;реализуем <span class="intro__heading-large">консервное <br>оборудование</span>
+          </h1>
+        </div>
+        <a class="button-down heading__button-down js-button-down" aria-label="Прокрутить вниз" href="#">
+        </a>
+      </section>
+      <div class="catalog js-down">
+        <div class="catalog__wrap">
+          <div class="catalog__inner">
+            <div class="catalog-nav catalog__nav">
+              <h2 class="catalog-nav__heading">Каталог</h2>
+              <div class="catalog-nav__button js-catalog-nav-button">Меню
+                <span class="control control--down catalog-nav__control">
+                </span>
+              </div>
+              <ul class="catalog-nav__list">
+                <li class="catalog-nav__item active">
+                  <a class="catalog-nav__link" href="#">Автоматические закаточные машины
+                  </a>
+                </li>
+                <li class="catalog-nav__item">
+                  <a class="catalog-nav__link" href="#">Полуавтоматические закаточные машины
+                  </a>
+                </li>
+                <li class="catalog-nav__item">
+                  <a class="catalog-nav__link" href="#">Укупорочные машины
+                  </a>
+                </li>
+                <li class="catalog-nav__item">
+                  <a class="catalog-nav__link" href="#">Агрегаты дозировочно-закаточные
+                  </a>
+                </li>
+                <li class="catalog-nav__item">
+                  <a class="catalog-nav__link" href="#">Дозировочно-наполнительные машины
+                  </a>
+                </li>
+                <li class="catalog-nav__item">
+                  <a class="catalog-nav__link" href="#">Запчасти для закаточных машин
+                  </a>
+                </li>
+                <li class="catalog-nav__item">
+                  <a class="catalog-nav__link" href="#">Импортное оборудование
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-slider catalog__slider js-catalog-slider">
+              <div class="catalog-slider__item">
+                <div class="catalog-item">
+                  <div class="catalog-item__inner">
+                    <a class="catalog-item__image-wrap" href="#">
+                      <img class="catalog-item__image" src="./assets/upload/catalog-item01.jpg" alt=" ">
+                    </a>
+                    <div class="catalog-item__content">
+                      <h4 class="catalog-item__heading">
+                        <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-К3К-79
+                        </a>
+                      </h4>
+                      <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-slider__item">
+                <div class="catalog-item">
+                  <div class="catalog-item__inner">
+                    <a class="catalog-item__image-wrap" href="#">
+                      <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt=" ">
+                    </a>
+                    <div class="catalog-item__content">
+                      <h4 class="catalog-item__heading">
+                        <a class="catalog-item__link" href="#">Автоматическая вакуумзакаточная машина Б4-КЗК-84А
+                        </a>
+                      </h4>
+                      <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-slider__item">
+                <div class="catalog-item">
+                  <div class="catalog-item__inner">
+                    <a class="catalog-item__image-wrap" href="#">
+                      <img class="catalog-item__image" src="./assets/upload/catalog-item03.jpg" alt=" ">
+                    </a>
+                    <div class="catalog-item__content">
+                      <h4 class="catalog-item__heading">
+                        <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                        </a>
+                      </h4>
+                      <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-slider__item">
+                <div class="catalog-item">
+                  <div class="catalog-item__inner">
+                    <a class="catalog-item__image-wrap" href="#">
+                      <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt=" ">
+                    </a>
+                    <div class="catalog-item__content">
+                      <h4 class="catalog-item__heading">
+                        <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                        </a>
+                      </h4>
+                      <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="writeus">
+        <div class="writeus__wrap">
+          <h2 class="writeus__heading">Напишите нам</h2>
+          <form action="/" method="post" accept-charset="UTF-8">
+            <div class="writeus__row">
+              <div class="writeus__field-group">
+                <label class="field field--with-icon writeus__field">
+                  <span class="hidden">Ваше имя
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Ваше имя" name="user" type="text" aria-required="true" aria-invalid="false">
+                  <span class="field__icon-wrap">
+                    <svg class="field__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+                    </svg>
+                  </span>
+                </label>
+                <label class="field field--with-icon writeus__field">
+                  <span class="hidden">E-mail
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="E-mail" name="email" type="email" aria-required="true" aria-invalid="false">
+                  <span class="field__icon-wrap">
+                    <svg class="field__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#email"></use>
+                    </svg>
+                  </span>
+                </label>
+                <label class="field field--with-icon writeus__field writeus__field--message">
+                  <span class="hidden">Сообщение
+                  </span>
+                  <textarea class="field__input" tabindex="0" placeholder="Сообщение" name="message" aria-required="true" aria-invalid="false">
+                  </textarea>
+                  <span class="field__icon-wrap">
+                    <svg class="field__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#message"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <label class="button button--bg-primary button--large writeus__submit">
+                <input class="hidden" type="submit">
+                Проконсультироваться
+              </label>
+            </div>
+            <div class="writeus__confirm">
+              <label class="checkbox-confirm" aria-required="true" aria-invalid="false">
+                <input class="hidden checkbox-confirm__input" name="name" checked type="checkbox" aria-required="true" aria-invalid="false">
+                <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                </span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <section class="features">
+        <div class="features__wrap">
+          <h2 class="hidden">Наши преимущества</h2>
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="features-item features-item--production" filter="#grayscale">
+                <div class="features-item__svg-wrap">
+                  <svg class="features-item__svg" xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 9999 9999" preserveAspectRatio="xMinYMin meet">
+                    <defs>
+                      <filter id="filtersPicture">
+                        <feComposite result="inputTo_38" in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0"></feComposite>
+                        <feColorMatrix id="filter_38" type="saturate" values="0" data-filterid="38"></feColorMatrix>
+                      </filter>
+                    </defs>
+                    <image class="features-item__image" filter="url(#filtersPicture)" x="0" y="0" width="9999px" height="9999px" preserveAspectRatio="xMinYMin meet" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/images/features-production.jpg"></image>
+                  </svg>
+                </div>
+                <div class="features-item__text">Собственное производство
+                </div>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="features-item features-item--dealer" filter="#grayscale">
+                <div class="features-item__svg-wrap">
+                  <svg class="features-item__svg" xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 9999 9999" preserveAspectRatio="xMinYMin meet">
+                    <defs>
+                      <filter id="filtersPicture">
+                        <feComposite result="inputTo_38" in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0"></feComposite>
+                        <feColorMatrix id="filter_38" type="saturate" values="0" data-filterid="38"></feColorMatrix>
+                      </filter>
+                    </defs>
+                    <image class="features-item__image" filter="url(#filtersPicture)" x="0" y="0" width="9999px" height="9999px" preserveAspectRatio="xMinYMin meet" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/images/features-dealer.jpg"></image>
+                  </svg>
+                </div>
+                <div class="features-item__text">Официальный&nbsp;дилер импортного оборудования
+                </div>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="features-item features-item--personal" filter="#grayscale">
+                <div class="features-item__svg-wrap">
+                  <svg class="features-item__svg" xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 9999 9999" preserveAspectRatio="xMinYMin meet">
+                    <defs>
+                      <filter id="filtersPicture">
+                        <feComposite result="inputTo_38" in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0"></feComposite>
+                        <feColorMatrix id="filter_38" type="saturate" values="0" data-filterid="38"></feColorMatrix>
+                      </filter>
+                    </defs>
+                    <image class="features-item__image" filter="url(#filtersPicture)" x="0" y="0" width="9999px" height="9999px" preserveAspectRatio="xMinYMin meet" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/images/features-personal.jpg"></image>
+                  </svg>
+                </div>
+                <div class="features-item__text">Высоко&shy;квалифицированные кадры
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="service">
+        <div class="service__wrap">
+          <h2 class="service__heading">Наши услуги</h2>
+          <ul class="service__list">
+            <li class="service__item">
+              <div class="service-item">
+                <div class="service-circle service-item__circle">
+                  <svg class="service-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#service01"></use>
+                  </svg>
+                </div>
+                <span class="service-item__text">Обучаем персонал работе <br>на оборудовании, согласно <br>эксплуатационной документации
+                </span>
+              </div>
+            </li>
+            <li class="service__item">
+              <div class="service-item">
+                <div class="service-circle service-item__circle">
+                  <svg class="service-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#service02"></use>
+                  </svg>
+                </div>
+                <span class="service-item__text">Осуществляем проведение <br>шеф-монтажных <br>и пусконаладочных работ
+                </span>
+              </div>
+            </li>
+            <li class="service__item">
+              <div class="service-item">
+                <div class="service-circle service-item__circle">
+                  <svg class="service-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#service03"></use>
+                  </svg>
+                </div>
+                <span class="service-item__text">Поставляем <br>любые <br>запасные части
+                </span>
+              </div>
+            </li>
+            <li class="service__item">
+              <div class="service-item">
+                <div class="service-circle service-item__circle">
+                  <svg class="service-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#service04"></use>
+                  </svg>
+                </div>
+                <span class="service-item__text">Поставляем <br>любые <br>запасные части
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="statistic">
+        <div class="statistic__wrap">
+          <div class="statistic__inner">
+            <h2 class="hidden">Статистика</h2>
+            <ul class="statistic__list">
+              <li class="statistic__item">
+                <div class="statistic-item">
+                  <div class="statistic-circle statistic-item__circle">
+                    <span class="statistic-circle__text statistic-circle__text--small">около
+                    </span>
+                    <span class="statistic-circle__text statistic-circle__text--large">50
+                    </span>
+                  </div>
+                  <span class="statistic-item__text">полуавтоматических <br>и автоматических машин <br>выпускаем в год
+                  </span>
+                </div>
+              </li>
+              <li class="statistic__item">
+                <div class="statistic-item">
+                  <div class="statistic-circle statistic-item__circle">
+                    <span class="statistic-circle__text statistic-circle__text--small">более
+                    </span>
+                    <span class="statistic-circle__text statistic-circle__text--large">100
+                    </span>
+                  </div>
+                  <span class="statistic-item__text">предприятий <br>работают на нашем <br>оборудовании
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="process">
+        <div class="process__wrap">
+          <h2 class="hidden">Процесс приобретения оборудования</h2>
+          <ol class="process__list">
+            <li class="process__item">
+              <div class="process-item">
+                <div class="process-circle process-item__circle">
+                  <svg class="process-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#process01"></use>
+                  </svg>
+                </div>
+                <span class="process-item__text">Оформление заказа
+                </span>
+              </div>
+            </li>
+            <li class="process__item">
+              <div class="process-item">
+                <div class="process-circle process-circle--to-right-shift process-item__circle">
+                  <svg class="process-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#process02"></use>
+                  </svg>
+                </div>
+                <span class="process-item__text">Оформление, согласование <br>и подписание документов
+                </span>
+              </div>
+            </li>
+            <li class="process__item">
+              <div class="process-item">
+                <div class="process-circle process-item__circle">
+                  <svg class="process-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#process03"></use>
+                  </svg>
+                </div>
+                <span class="process-item__text">Оплата заказа
+                </span>
+              </div>
+            </li>
+            <li class="process__item">
+              <div class="process-item">
+                <div class="process-circle process-item__circle">
+                  <svg class="process-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#process04"></use>
+                  </svg>
+                </div>
+                <span class="process-item__text">Организация доставки <br>ТК до Заказчика
+                </span>
+              </div>
+            </li>
+            <li class="process__item">
+              <div class="process-item">
+                <div class="process-circle process-item__circle">
+                  <svg class="process-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#process05"></use>
+                  </svg>
+                </div>
+                <span class="process-item__text">Гарантия и поставка <br>запасных частей
+                </span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__wrap">
+          <div class="footer__inner">
+            <div class="footer__row footer__row--company">
+              <div class="footer__col footer__col--left">
+                <a class="logo logo--secondary footer__logo">
+                  <img class="logo__image" src="./assets/images/logo-secondary.svg" alt=" ">
+                </a>
+                <p class="footer__text footer__text--info">Производство технологического <br>оборудования <br>для консервных производств
+                </p>
+              </div>
+              <div class="footer__col footer__col--right">
+                <p class="footer__text">
+                  <a class="header__phone" href="tel:+79295407124">+7 (929) 540-71-24
+                  </a>
+                  <a class="header__phone" href="tel:+74992816944">+7 (499) 281-69-44
+                  </a>
+                </p>
+                <p class="footer__text footer__text--address">140060, Московская обл., <br>Люберецкий р-н., ул. Ленина, 52, оф.&nbsp;324
+                </p>
+                <p class="footer__text">
+                  <a href="mailto:tdpmts2016@mail.ru">tdpmts2016@mail.ru
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="footer__row footer__row--nav">
+              <div class="footer__col footer__col--left" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                <h4 class="footer__title">Компания</h4>
+                <ul class="footer__list">
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">О компании
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Производство
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Услуги
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Новости
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Статьи
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Контакты
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__col footer__col--right" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                <h4 class="footer__title">Оборудование</h4>
+                <ul class="footer__list">
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Автоматические закаточные машины
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Полуавтоматические закаточные машины
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Укупорочные машины
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Агрегаты дозировочно-закаточные
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Дозировочно-наполнительные машины
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Запчасти для закаточных машин
+                    </a>
+                  </li>
+                  <li class="footer__item" itemprop="name">
+                    <a href="#" itemprop="url">Импортное оборудование
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__wrap">
+          <div class="footer__row">
+            <div class="footer__col footer__col--left">
+              <div class="footer__copyright">&copy;&nbsp;Copyright 2019&nbsp;г.
+              </div>
+            </div>
+            <div class="footer__col footer__col--right">
+              <div class="footer__madein">Сделанo в
+                <a title="Sheer" href="https://sheer82.ru/">
+                  <svg>
+                    <use xlink:href="./assets/images/sprites/sprite.svg#sheer"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./scripts/libs/jquery.js"></script>
     <script src="./scripts/libs/imask.js"></script>
     <script src="./scripts/libs/svg4everybody.js"></script>
