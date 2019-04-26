@@ -2038,13 +2038,22 @@ body > *
     height: 9px;
 
     content: '';
+    -webkit-transition: .3s cubic-bezier(.25, .1, .25, 1);
+         -o-transition: .3s cubic-bezier(.25, .1, .25, 1);
+            transition: .3s cubic-bezier(.25, .1, .25, 1); 
     -webkit-transform-origin: center;
         -ms-transform-origin: center;
-            transform-origin: center; 
+            transform-origin: center;
 
     border-top: 2px solid;
-    border-top-color: #474955;
+    border-top-color: #fff;
     border-right: 2px solid;
+    border-right-color: #fff;
+}
+.control:hover::after,
+.control:focus::after
+{
+    border-top-color: #474955;
     border-right-color: #474955;
 }
 .control--prev::after
