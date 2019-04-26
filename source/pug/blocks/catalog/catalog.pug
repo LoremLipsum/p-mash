@@ -1,0 +1,18 @@
+mixin catalog(data)
+    +el({
+        class: 'catalog',
+        mix: data.mix,
+        js: data.js,
+        mod: data.mod,
+    })&attributes(attributes)
+        .catalog__wrap
+            .catalog__inner
+                +catalog-nav({
+                    mix: 'catalog__nav',
+                    items: catalogNav,
+                })
+                +catalog-slider({
+                    items: catalogSlider,
+                    mix: 'catalog__slider',
+                    js: 'catalog-slider'
+                })

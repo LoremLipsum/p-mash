@@ -1,0 +1,34 @@
+mixin catalog-item(data)
+    +el({
+        class: 'catalog-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .catalog-item__inner
+            +el({
+                tag: 'a',
+                href: '',
+                class: 'catalog-item__image-wrap',
+            })
+                +el({
+                    tag: 'img',
+                    upload: data.image,
+                    class: 'catalog-item__image',
+                })
+            .catalog-item__content
+                +el({
+                    tag: 'h4',
+                    mix: 'catalog-item__heading',
+                    before: {
+                        tag: 'a',
+                        class: 'catalog-item__link',
+                        text: data.heading,
+                    }
+                })
+                +button({
+                    tag: 'a',
+                    mix: 'catalog-item__button',
+                    mod: ['small', 'bg-primary'],
+                    text: 'Подробнее',
+                })

@@ -1,0 +1,17 @@
+mixin intro(data)
+    +el({
+        tag: 'section',
+        class: 'intro',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .intro__wrap
+            +el({
+                tag: 'h1',
+                mix: 'intro__heading',
+                text: 'Разрабатываем, производим <br>и&nbsp;реализуем <span class="intro__heading-large">консервное <br>оборудование</span>'
+            })
+        +button-down({
+            mix: 'heading__button-down',
+        })

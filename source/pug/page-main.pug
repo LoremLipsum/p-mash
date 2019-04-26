@@ -1,0 +1,30 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'ПродМаш'
+    - var main = true
+    - var pageId = 1
+
+block content
+    main
+        +intro({
+
+        })
+        +catalog({
+            js: 'down',
+        })
+        +writeus({
+
+        })
+        +features({
+            items: features,
+        })
+        +service({
+            items: service,
+        })
+        +statistic({
+            items: statistic,
+        })
+        +process({
+            items: process,
+        })

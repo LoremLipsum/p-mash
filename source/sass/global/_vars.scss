@@ -1,0 +1,58 @@
+$fonts: (
+  primary: #{"Gotham Pro", "Helvetica", "Pragmatica", "Arial", sans-serif, "Nimbus Sans L", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
+);
+
+$breakpoints: (
+  small: 320px,
+  small-lg: 520px,
+  medium: 768px,
+  medium-lg: 920px,
+  large: 1220px,
+);
+
+$pads: (
+  small: 20px,
+  medium: 30px,
+  large: 40px,
+);
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$colors: (
+  primary: #70af4a,
+  light: #f2f2f3,
+  gray: #545764,
+  light-gray: #e4e4e6,
+  dark-gray: #474955,
+  black: #474955,
+  white: #fff,
+  error: #d0021b,
+  disabled: #c9c9c6,
+  border: #c7c8cc,
+  light-border: #ececee,
+);
+
+// время анимаций
+$durations: (
+  md: 0.3s,
+  lg: 0.6s,
+);
+
+// для бордер-радиусов
+$radius: (
+  sm: 4px,
+  md: 8px,
+);
+
+$func: (
+  primary: cubic-bezier(0.25, 0.1, 0.25, 1),
+);
+
+$mb: (
+  sm: 16px,
+  md: 18px,
+  lg: 22px,
+);
+
+$change: 8%;

@@ -1,0 +1,13 @@
+mixin service-circle(data)
+    +el({
+        class: 'service-circle',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        if data.icon
+            +el({
+                tag: 'svg',
+                icon: data.icon,
+                class: 'service-circle__icon'
+            })

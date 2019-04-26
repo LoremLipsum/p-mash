@@ -1,0 +1,51 @@
+mixin writeus(data)
+    +el({
+        class: 'writeus',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .writeus__wrap
+            h2.writeus__heading Напишите нам
+            +f({
+
+            })
+                .writeus__row
+                    .writeus__field-group
+                        +field({
+                            mix: 'writeus__field',
+                            icon: 'user',
+                            mod:  'with-icon',
+                            label: 'Ваше имя',
+                            name: 'user',
+                            placeholder: 'Ваше имя'
+                        })(aria-required='true', aria-invalid='false')
+                        +field({
+                            mix: 'writeus__field',
+                            icon: 'email',
+                            mod: 'with-icon',
+                            label: 'E-mail',
+                            type: 'email',
+                            name: 'email',
+                            placeholder: 'E-mail'
+                        })(aria-required='true', aria-invalid='false')
+                        +field({
+                            tag: 'textarea',
+                            mix: 'writeus__field writeus__field--message',
+                            icon: 'message',
+                            mod: 'with-icon',
+                            label: 'Сообщение',
+                            name: 'message',
+                            placeholder: 'Сообщение'
+                        })(aria-required='true', aria-invalid='false')
+                    +button({
+                        mix: 'writeus__submit',
+                        mod: ['bg-primary', 'large'],
+                        type: 'submit',
+                        text: 'Проконсультироваться'
+                    })
+                .writeus__confirm
+                    +checkbox-confirm({
+                        label: 'Согласие на обработку персональных данных',
+                        checked: true,
+                    })(aria-required='true', aria-invalid='false')

@@ -1,0 +1,68 @@
+.content {
+  padding-top: 35px;
+  padding-bottom: 60px;
+
+  &--no-bottom-space {
+    padding-bottom: 0 !important;
+  }
+}
+
+.content__wrap {
+  @include wrapper;
+}
+
+.content__breadcrumbs {
+
+}
+
+.content__heading {
+}
+
+.content__pagination {
+  &--space-before {
+    margin-top: 20px;
+  }
+
+  &--space-after {
+    margin-bottom: 40px;
+  }
+}
+
+.content__button-bottom-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.content__button-bottom {
+  width: 100%;
+}
+
+
+.content__contacts {
+  // margin-bottom: 50px;
+}
+
+.content__catalog-nav {
+  margin-bottom: 20px;
+}
+
+@include respond-to(medium) {
+  .content {
+  }
+
+  .content__with-aside,
+  .content__brends,
+  .content__assortiment,
+  .content__view {
+    margin-bottom: 40px;
+  }
+
+}
+
+@include respond-to(medium-lg) {
+
+}
+
+@include respond-to(large) {
+
+}

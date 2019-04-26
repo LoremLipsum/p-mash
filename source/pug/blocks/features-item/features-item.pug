@@ -1,0 +1,20 @@
+mixin features-item(data)
+    +el({
+        class: 'features-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        style: data.style,
+    })&attributes(attributes)
+        .features-item__svg-wrap
+            svg.features-item__svg(xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 9999 9999" preserveAspectRatio="xMinYMin meet" )
+                defs
+                    filter#filtersPicture
+                        feComposite(result="inputTo_38" in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0")
+                        feColorMatrix(id="filter_38" type="saturate" values="0" data-filterid="38")
+                image.features-item__image(filter="url(#filtersPicture)", x="0", y="0", width="9999px", height="9999px", preserveAspectRatio="xMinYMin meet" xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="./assets/images/" + data.image)
+
+        +el({
+            class: 'features-item__text',
+            text: data.text,
+        })

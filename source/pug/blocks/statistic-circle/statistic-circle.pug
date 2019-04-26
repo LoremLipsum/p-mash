@@ -1,0 +1,19 @@
+mixin statistic-circle(data)
+    +el({
+        class: 'statistic-circle',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'span',
+            class: 'statistic-circle__text',
+            mod: 'small',
+            text: data.text.small,
+        })
+        +el({
+            tag: 'span',
+            class: 'statistic-circle__text',
+            mod: 'large',
+            text: data.text.large,
+        })

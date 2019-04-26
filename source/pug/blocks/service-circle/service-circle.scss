@@ -1,0 +1,41 @@
+.service-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  width: 110px;
+  height: 110px;
+  border: 2px solid color(light);
+  border-radius: 50%;
+  background-color: color(light);
+  background-clip: content-box;
+
+  &--to-right-shift {
+    .service-circle__icon {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.service-circle__icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  fill: color(primary);
+}
+
+@include respond-to(medium) {
+  .service-circle {
+    padding: 7px;
+    width: 114px;
+    height: 114px;
+  }
+}
+
+@include respond-to(large) {
+  .service-circle {
+    padding: 8px;
+    width: 118px;
+    height: 118px;
+  }
+}

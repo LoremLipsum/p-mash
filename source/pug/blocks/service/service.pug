@@ -1,0 +1,27 @@
+mixin service(data)
+    +el({
+        tag: 'section',
+        class: 'service',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .service__wrap
+            h2.service__heading Наши услуги
+            +el({
+                tag: 'ul',
+                class: 'service__list',
+            })
+                each item, index in data.items
+                    +el({
+                        tag: 'li',
+                        class: 'service__item',
+                    })
+                        +service-item({
+                            mod: item.mod,
+                            circle: {
+                                icon: item.circle.icon,
+                                mod: item.circle.mod,
+                            },
+                            text: item.text
+                        })

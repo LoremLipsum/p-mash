@@ -1,0 +1,13 @@
+mixin catalog-slider(data)
+    +el({
+        class: 'catalog-slider',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            .catalog-slider__item
+                +catalog-item({
+                    image: item.image,
+                    heading: item.heading,
+                })

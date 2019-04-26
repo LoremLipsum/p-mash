@@ -1,0 +1,46 @@
+.logo {
+  display: block;
+  text-decoration: none;
+
+  &--small {
+    width: 36px;
+    height: 36px;
+
+    .logo__image {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+.logo,
+.logo__image {
+  display: block;
+  width: 170px;
+  height: 44px;
+}
+
+@include respond-to(small-lg) {
+  .logo {
+  }
+
+  .logo,
+  .logo__image {
+    width: 195px;
+    height: 51px;
+  }
+}
+
+@include respond-to(large) {
+  .logo {
+    &--secondary {
+      width: 217px;
+      height: 56px;
+
+      .logo__image {
+        width: 217px;
+        height: 56px;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+mixin catalog-nav(data)
+    +el({
+        class: 'catalog-nav',
+        mix: data.mix,
+        js: data.js,
+        mod: data.mod,
+    })&attributes(attributes)
+        h2.catalog-nav__heading Каталог
+        +el({
+            mix: 'catalog-nav__button',
+            text: 'Меню',
+            cross: true,
+            js: 'catalog-nav-button',
+        })
+            +control({
+                tag: 'span',
+                mod: 'down',
+                mix: 'catalog-nav__control',
+            })
+        +el({
+            tag: 'ul',
+            class: 'catalog-nav__list',
+        })
+            each item, index in data.items
+                +el({
+                    tag: 'li',
+                    class: 'catalog-nav__item',
+                    mix: index == 0 ? 'active' : ''
+                })
+                    +el({
+                        tag: 'a',
+                        class: 'catalog-nav__link',
+                        text: item.text,
+                        href: item.href
+                    })

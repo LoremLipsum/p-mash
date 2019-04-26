@@ -1,0 +1,31 @@
+mixin statistic(data)
+    +el({
+        tag: 'section',
+        class: 'statistic',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .statistic__wrap
+            .statistic__inner
+                h2.hidden Статистика
+                +el({
+                    tag: 'ul',
+                    class: 'statistic__list',
+                })
+                    each item, index in data.items
+                        +el({
+                            tag: 'li',
+                            class: 'statistic__item',
+                        })
+                            +statistic-item({
+                                mod: item.mod,
+                                circle: {
+                                    text: {
+                                        small: item.circle.text.small,
+                                        large: item.circle.text.large,
+                                    },
+                                    mod: item.circle.mod,
+                                },
+                                text: item.text
+                            })

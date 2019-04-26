@@ -1,0 +1,126 @@
+$btn-nav-width: 40px;
+$btn-nav-height: 40px;
+$btn-nav-distanse: 6px;
+$btn-nav-thickness: 2px;
+$btn-nav-color: color(gray);
+$duration: 0.4s;
+
+.btn-nav {
+  width: $btn-nav-width;
+  height: $btn-nav-height;
+  padding: 8px;
+  border-radius: 50%;
+
+  &.active {
+    background-color: color(light);
+
+    .btn-nav__lines {
+      &::before {
+        animation-name: nav-before-open;
+      }
+
+      &::after {
+        animation-name: nav-after-open;
+      }
+    }
+  }
+
+  @include hover {
+    background-color: color(light);
+  }
+}
+
+.btn-nav__icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-nav__lines {
+  position: relative;
+  display: block;
+  top: calc(50% - #{$btn-nav-thickness / 2});
+  height: $btn-nav-thickness;
+  background-color: $btn-nav-color;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: $btn-nav-thickness;
+    background-color: $btn-nav-color;
+    transform-origin: center;
+    animation-duration: $duration;
+    animation-timing-function: func(primary);
+    animation-fill-mode: forwards;
+  }
+
+  &::before {
+    top: - $btn-nav-distanse;
+    animation-name: nav-before-close;
+  }
+
+  &::after {
+    bottom: - $btn-nav-distanse;
+    animation-name: nav-after-close;
+  }
+}
+
+@keyframes nav-before-close {
+  0% {
+    transform: translateY($btn-nav-distanse) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY($btn-nav-distanse / 2) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav-after-close {
+  0% {
+    transform: translateY(- $btn-nav-distanse) rotate(-45deg);
+  }
+
+  50% {
+    transform: translateY(- $btn-nav-distanse / 2) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav-before-open {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY($btn-nav-distanse / 2);
+  }
+
+  100% {
+    transform: translateY($btn-nav-distanse) rotate(45deg);
+  }
+}
+
+@keyframes nav-after-open {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(- $btn-nav-distanse / 2);
+  }
+
+  100% {
+    transform: translateY(- $btn-nav-distanse) rotate(-45deg);
+  }
+}

@@ -1,0 +1,71 @@
+.statistic-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  width: 152px;
+  height: 152px;
+  border: 2px solid color(primary);
+  border-radius: 50%;
+  background-color: color(primary);
+  background-clip: content-box;
+
+  &--to-right-shift {
+    .statistic-circle__icon {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.statistic-circle__text {
+  display: block;
+  line-height: 1;
+  color: color(white);
+  text-align: center;
+
+  &--small {
+    font-size: 20px;
+  }
+
+  &--large {
+    font-weight: 700;
+    font-size: 50px;
+  }
+}
+
+@include respond-to(medium) {
+  .statistic-circle {
+    padding: 9px;
+    width: 162px;
+    height: 162px;
+  }
+
+  .statistic-circle__text {
+    &--small {
+      font-size: 20px;
+    }
+
+    &--large {
+      font-size: 50px;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .statistic-circle {
+    padding: 10px;
+    width: 172px;
+    height: 172px;
+  }
+
+  .statistic-circle__text {
+    &--small {
+      font-size: 24px;
+    }
+
+    &--large {
+      font-size: 60px;
+    }
+  }
+}

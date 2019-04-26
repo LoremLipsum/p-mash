@@ -1,0 +1,17 @@
+mixin service-item(data)
+    +el({
+        class: 'service-item',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +service-circle({
+            icon: data.circle.icon,
+            mod: data.circle.mod,
+            mix: 'service-item__circle',
+        })
+        +el({
+            tag: 'span',
+            class: 'service-item__text',
+            text: data.text
+        })

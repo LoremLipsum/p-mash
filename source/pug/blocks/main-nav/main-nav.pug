@@ -1,0 +1,57 @@
+mixin main-nav(data)
+    -var className = 'main-nav'
+    -var active = ''
+
+    +el({
+        tag: 'ul',
+        class: className,
+        mod: data.mod,
+        mix: data.mix
+    })&attributes(attributes)
+        if data.line
+            +el({
+                tag: 'li',
+                class: className + '__item',
+                mod: 'line',
+            })
+        each item, index in data.items
+            if pageId && index == pageId - 1
+                -var active = ' active'
+            else
+                -var active = ''
+            +item(className, item, active)
+                if item.items
+                    +el({
+                        tag: 'ul',
+                        class: className + '__secondary',
+                    })
+                        each itemSecondary in item.items
+                            +item(className, itemSecondary, '')
+
+mixin item(classItem, data, active)
+    +el({
+        tag: 'li',
+        class: classItem + '__item' + active,
+        mod: data.mod,
+        mix: data.mix,
+    })(itemprop='name')
+        +el({
+            tag: data.tag ? data.tag : 'a',
+            href: data.href,
+            type: data.type,
+            class: classItem + '__link',
+            title: data.title,
+            text: data.text,
+            before: data.before,
+            after: data.after
+        })(itemprop='url')
+            if data.icon
+                +el({
+                    tag: 'svg',
+                    icon: data.icon,
+                    width: '24',
+                    height: '24',
+                    before: data.iconBefore,
+                    before: data.iconAfter,
+                })
+        block

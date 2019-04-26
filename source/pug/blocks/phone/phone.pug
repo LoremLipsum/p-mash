@@ -1,0 +1,9 @@
+mixin phone(data)
+    +el({
+        class: 'phone',
+        tag: 'a',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)

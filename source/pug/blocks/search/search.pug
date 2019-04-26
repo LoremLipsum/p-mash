@@ -1,0 +1,21 @@
+mixin search(data)
+    +el({
+        class: 'search',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +f({})
+            +field({
+                type: 'search',
+                mod: 'bg-light',
+                mix: 'field__search',
+                placeholder: 'Поиск',
+            })
+            +button({
+                mix: 'search__button',
+                type: 'submit',
+                icon: 'search',
+                mod: 'submit',
+                js: 'submit-search'
+            })
