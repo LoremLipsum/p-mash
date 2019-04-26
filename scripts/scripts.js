@@ -162,8 +162,8 @@ picturefill();
 			autoplaySpeed: 5000,
       infinite: true,
        adaptiveHeight: true,
-      prevArrow: '<button class="control control--prev" type="button" tabindex="0" aria-lable="Назад"></button>',
-      nextArrow: '<button class="control control--next" type="button" tabindex="0" aria-lable="Вперёд"></button>',
+      prevArrow: '<button class="control control--prev" type="button" tabindex="0" aria-label="Назад"></button>',
+      nextArrow: '<button class="control control--next" type="button" tabindex="0" aria-label="Вперёд"></button>',
       responsive: [
         {
           breakpoint: 1220,
