@@ -19,7 +19,11 @@
 
   &.active {
     border-bottom: none;
-    box-shadow: 0 6px 15px 0 rgba(#6d6f7b, 0.2);
+    box-shadow: 0 0 15px 0 rgba(#6d6f7b, 0.3);
+
+    .header__logo-small {
+      display: block;
+    }
   }
 }
 

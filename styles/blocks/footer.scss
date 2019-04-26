@@ -78,10 +78,11 @@
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: rgba(#fff, 0);
 
     @include hover {
+      text-decoration: underline;
       text-decoration-color: rgba(#fff, 0.5);
     }
   }

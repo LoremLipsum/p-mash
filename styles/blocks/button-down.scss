@@ -1,15 +1,44 @@
 .button-down {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   text-decoration: none;
+  animation-name: button_down;
+  animation-duration: 1s;
+  animation-timing-function: func(primary);
+  animation-iteration-count: infinite;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    transform-origin: center;
+    transform: rotate(135deg);
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-top: 3px solid;
+    border-right: 3px solid;
+    border-top-color: color(white);
+    border-right-color: color(white);
+  }
 }
 
-.button-down__icon {
-  display: block;
-  width: 20px;
-  height: 20px;
-  fill: color(white);
+@keyframes button_down {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+
+  30% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }

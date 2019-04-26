@@ -28,6 +28,11 @@
   .field__input {
     border: 1px solid color(gray);
   }
+
+  .field__icon-wrap {
+    margin-top: 1px;
+    height: calc(100% - 2px);
+  }
 }
 
 .writeus__field-group {
