@@ -21,6 +21,22 @@
   font-size: 14px;
   font-weight: 500;
   text-align: center;
+
+  .catalog-nav__control {
+    &::after {
+      border-top-color: color(black);
+      border-right-color: color(black);
+    }
+  }
+
+  @include hover {
+    .catalog-nav__control {
+      &::after {
+        border-top-color: color(black);
+        border-right-color: color(black);
+      }
+    }
+  }
 }
 
 .catalog-nav__control {
