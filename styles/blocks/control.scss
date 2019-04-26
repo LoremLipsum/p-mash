@@ -17,6 +17,7 @@
     border-top-color: color(white);
     border-right-color: color(white);
     transform-origin: center;
+    transition: duration(md) func(primary);
   }
 
   @include hover {

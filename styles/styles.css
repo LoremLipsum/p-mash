@@ -3902,7 +3902,7 @@ body > *
 {
     position: relative;
 
-    max-width: 230px;
+    max-width: 250px;
     margin: 0 auto;
     padding-bottom: 24px;
 }
@@ -3967,6 +3967,14 @@ body > *
         -webkit-transform: translate(-20px, -50%) rotate(45deg);
             -ms-transform: translate(-20px, -50%) rotate(45deg);
                 transform: translate(-20px, -50%) rotate(45deg);
+    }
+}
+
+@media (min-width: 920px)
+{
+    .process-item--documents .process-item__text
+    {
+        margin: 0 -15px;
     }
 }
 
