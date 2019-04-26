@@ -5075,6 +5075,17 @@ body > *
 
     text-align: center;
 }
+.catalog-nav__button .catalog-nav__control::after
+{
+    border-top-color: #474955;
+    border-right-color: #474955;
+}
+.catalog-nav__button:hover .catalog-nav__control::after,
+.catalog-nav__button:focus .catalog-nav__control::after
+{
+    border-top-color: #474955;
+    border-right-color: #474955;
+}
 
 .catalog-nav__control
 {
