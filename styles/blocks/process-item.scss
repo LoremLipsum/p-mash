@@ -1,5 +1,5 @@
 .process-item {
-  max-width: 230px;
+  max-width: 250px;
   margin: 0 auto;
   position: relative;
   padding-bottom: 24px;
@@ -50,6 +50,12 @@
   }
 }
 
-@include respond-to(large) {
-
+@include respond-to(medium-lg) {
+  .process-item {
+    &--documents {
+      .process-item__text {
+        margin: 0 -15px;
+      }
+    }
+  }
 }
