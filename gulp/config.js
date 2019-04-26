@@ -25,7 +25,7 @@ const config = {
                       './node_modules/svg4everybody/dist/svg4everybody.js',
                       './node_modules/imask/dist/imask.js',
                       './node_modules/picturefill/dist/picturefill.js',
-                      './node_modules/wowjs/dist/wow.js',
+                      // './node_modules/wowjs/dist/wow.js',
                       // 'node_modules/jquery-match-height/dist/jquery.matchHeight.js',
                       'node_modules/slick-carousel/slick/slick.js',
                       // 'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
