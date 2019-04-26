@@ -10,6 +10,7 @@ mixin form(data)
                     mod:  data.modField,
                     label: 'Ваше имя',
                     name: 'user',
+                    required: true,
                     placeholder: 'Ваше имя'
                 })(aria-required='true', aria-invalid='false')
             if data.lastName
@@ -29,6 +30,7 @@ mixin form(data)
                     label: 'E-mail',
                     type: 'email',
                     name: 'email',
+                    required: true,
                     placeholder: 'E-mail'
                 })(aria-required='true', aria-invalid='false')
             if data.tel
@@ -59,6 +61,7 @@ mixin form(data)
                     mod: data.modField,
                     label: data.message,
                     name: 'message',
+                    required: true,
                     placeholder: data.message
                 })(aria-required='true', aria-invalid='false')
             if data.confirm
@@ -67,7 +70,7 @@ mixin form(data)
                         mod: 'small',
                         label: 'Согласие на обработку персональных данных',
                         checked: true,
-                    })(aria-required='true', aria-invalid='false')
+                    })
             +el({
                 class: 'form__submit-wrap',
                 mod: data.modSubmit
