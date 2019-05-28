@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>Бандит</title>
+    <title>Продмаш</title>
     <meta name="description" content="Официальный дилер строительной техники в Респ. Башкортостан, Татарстан, Поволжье, Урале">
     <meta name="keywords" content="Строительная техника, Эскаваторы, Фронтальные погрузчики, Погрузчики вилочные, Погрузчики телескопические, Погрузчики с бортовым поворотом, Самосвалы Moxy, Перегружатели, Разрушители зданий, Техника для уборки помещений">
     <meta name="format-detection" content="telephone=no">
@@ -29,15 +29,25 @@
             </a>
             <div class="header__top-column">
               <ul class="header__list header__list--top">
-                <li class="header__item">
-                  <button class="button-icon button-icon--bg-primary" title="Поиск" type="button">
+                <li class="header__item header__item--search">
+                  <button class="button-icon button-icon--bg-gray js-search-sm-open" title="Поиск" type="button">
                     <svg class="button-icon__icon">
                       <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
                     </svg>
                   </button>
+                  <div class="search header__search js-search-sm">
+                    <form action="/" method="post" accept-charset="UTF-8">
+                      <input class="search__field" placeholder="Поиск" type="search">
+                      <button class="button-icon button-icon--bg-gray search__button js-search-submit" type="button">
+                        <svg class="button-icon__icon">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
                 </li>
                 <li class="header__item">
-                  <button class="button-icon button-icon--bg-gray" title="Позвонить" type="button">
+                  <button class="button-icon button-icon--bg-primary js-callback-button" title="Позвонить" type="button">
                     <svg class="button-icon__icon">
                       <use xlink:href="./assets/images/sprites/sprite.svg#phone"></use>
                     </svg>
@@ -57,15 +67,25 @@
             <div class="header__info">Производство технологического <br>оборудования <br>для консервных производств</div>
             <div class="header__address header__address--middle">Московская область <br>Люберецкий район <br>ул. Ленина, 52, оф. 324</div>
             <ul class="header__list header__list--middle">
-              <li class="header__item">
-                <button class="button-icon button-icon--bg-primary" title="Поиск" type="button">
+              <li class="header__item header__item--search">
+                <button class="button-icon button-icon--bg-gray js-search-lg-open" title="Поиск" type="button">
                   <svg class="button-icon__icon">
                     <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
                   </svg>
                 </button>
+                <div class="search header__search js-search-lg">
+                  <form action="/" method="post" accept-charset="UTF-8">
+                    <input class="search__field" placeholder="Поиск" type="search">
+                    <button class="button-icon button-icon--bg-gray search__button js-search-submit" type="button">
+                      <svg class="button-icon__icon">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
               </li>
               <li class="header__item">
-                <button class="button-icon button-icon--bg-gray" title="Позвонить" type="button">
+                <button class="button-icon button-icon--bg-primary js-callback-button" title="Позвонить" type="button">
                   <svg class="button-icon__icon">
                     <use xlink:href="./assets/images/sprites/sprite.svg#phone"></use>
                   </svg>
@@ -103,7 +123,7 @@
                 <a class="main-nav__link" href="page-service.html" itemprop="url">Услуги
                 </a>
               </li>
-              <li class="main-nav__item" itemprop="name">
+              <li class="main-nav__item active" itemprop="name">
                 <a class="main-nav__link" href="page-news.html" itemprop="url">Новости
                 </a>
               </li>
@@ -133,7 +153,82 @@
     </header>
     <main class="content">
       <div class="content__wrap">
-        <h1 class="content__heading">Новости</h1>
+        <nav class="breadcrumbs content__breadcrumbs">
+          <ol class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="#" itemprop="item">
+                <span itemprop="name">Главная
+                </span>
+                <meta itemprop="position" content="1">
+              </a>
+            </li>
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="#" itemprop="item">
+                <span itemprop="name">Новости
+                </span>
+                <meta itemprop="position" content="2">
+              </a>
+            </li>
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="#" itemprop="item">
+                <span itemprop="name">Машина закаточная полуавтоматическая УЗН-03
+                </span>
+                <meta itemprop="position" content="3">
+              </a>
+            </li>
+          </ol>
+        </nav>
+        <article class="article">
+          <h1>Машина закаточная полуавтоматическая УЗН-03</h1>
+          <p class="float-right"><img src="assets/upload/image01.jpg" alt="Фото оборудования" width="375"></p>
+          <p><strong>УЗН-03 – полуавтоматическая настольная закаточная машина для предприятий консервной промышленности малой мощности</strong>
+            (мини-заводов).
+          </p>
+          <p>
+            УЗН-03 является исполнением закаточной машины УЗН  предназначенным для закатывания крупной тары.
+            <br>Машина производит герметичное укупоривание металлическими крышками методом обкатки (закатывания) металлических консервных банок № 14
+            по ГОСТ 5981-2011 (внутренний диаметр банки – 153,1 мм);
+            <br>В настоящее время изучается вопрос о возможности использования машины этого исполнения для закатывания банок № 47
+            по ГОСТ 5981-2011 (также с внутренним диаметром 153,1 мм, но большей высоты);
+          </p>
+          <h3>Закатывание банок выполняется в следующем</h3>
+          <ol>
+            <li>Наполненная банка, предварительно накрытая крышкой, устанавливается на поджимной стол</li>
+            <li>Опусканием рычага производится перемещение поджимного стола в верхнее положение, крышка надевается на патрон</li>
+            <li>Происходит полуавтоматический цикл закатывания банк</li>
+            <li>Перемещением рычага в исходное положение производится опускание поджимного стола</li>
+            <li>Укупоренная банка снимается и перемещается на цеховое накопительное или транспортное устройство</li>
+          </ol>
+          <p>
+            При выпуске машина налаживается на заданную толщину  металла.
+            <br>Переналадка машины для закатывания банок из жести другой толщины, производится путем замены комплекта закаточных роликов.
+            <br>Машина обслуживается одним оператором-станочником.
+            <br>Конструкция машины отвечает всем требованиям безопасности, установленным действующим законодательством. Для предотвращения случайного контакта рук оператора с вращающимися частями зона закатывания ограждена стационарным кожухом.
+          </p>
+          <h3>Основные технические характеристики:</h3>
+          <table>
+            <tr>
+              <th>Наименование</th>
+              <th>Значение</th>
+            </tr>
+            <tr>
+              <td>производительность, банок/мин</td>
+              <td>до 10</td>
+            </tr>
+            <tr>
+              <td>установленная мощность электродвигателя, кВт</td>
+              <td>0,55</td>
+            </tr>
+            <tr>
+              <td>род и характеристика тока питания</td>
+              <td>от 3-х проводной сети переменного тока 220 В, 50 Гц</td>
+            </tr>
+            <tr>
+              <td>масса, кг, не более</td>
+              <td>55 кг</td>
+            </tr>
+          </table>
+        </article>
       </div>
     </main>
     <footer class="footer">
@@ -250,6 +345,61 @@
         </div>
       </div>
     </footer>
+    <div class="modal js-modal-callback js-modal">
+      <div class="overlay modal__overlay active js-modal-overlay">
+      </div>
+      <div class="modal__dialog">
+        <button class="button-close button-close--bg-primary modal__close js-modal-close" aria-label="Закрыть окно" type="button">
+          <span class="button-close__icon">
+          </span>
+        </button>
+        <div class="modal__content">
+          <h3 class="modal__heading">Заказать звонок
+          </h3>
+          <form class="form" action="/" method="post" accept-charset="UTF-8">
+            <div class="form__group">
+              <label class="field field--with-icon field--border-transparent form__field">
+                <span class="hidden">Ваше имя
+                </span>
+                <input class="field__input" tabindex="0" placeholder="Ваше имя" name="user" required type="text" aria-required="true" aria-invalid="false">
+                <span class="field__icon-wrap">
+                  <svg class="field__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+                  </svg>
+                </span>
+                <span class="field__line">
+                </span>
+              </label>
+              <label class="field field--with-icon field--border-transparent form__field">
+                <span class="hidden">Введите телефон
+                </span>
+                <input class="field__input" tabindex="0" placeholder="+7(___)___-__-__" name="tel" type="tel" aria-required="true" aria-invalid="false">
+                <span class="field__icon-wrap">
+                  <svg class="field__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#mobile"></use>
+                  </svg>
+                </span>
+                <span class="field__line">
+                </span>
+              </label>
+            </div>
+            <div class="form__submit-wrap">
+              <label class="button button--bg-primary button--large form__submit">
+                <input class="hidden" type="submit">
+                Заказать
+              </label>
+            </div>
+            <div class="form__confirm-wrap">
+              <label class="checkbox-confirm form__confirm">
+                <input class="hidden checkbox-confirm__input" name="confirm" checked type="checkbox">
+                <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                </span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="./scripts/libs/jquery.js"></script>
     <script src="./scripts/libs/imask.js"></script>
     <script src="./scripts/libs/svg4everybody.js"></script>

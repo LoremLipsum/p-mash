@@ -1,0 +1,80 @@
+.map__wrap {
+  @include wrapper;
+}
+
+.map__content {
+  margin-bottom: 40px;
+
+  @include first-last;
+}
+
+.map__text {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.map__icon {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: color(black);
+}
+
+.map__link {
+  display: inline-block;
+  color: color(black);
+  text-decoration: none;
+}
+
+.map__map {
+  height: 250px;
+}
+
+@include respond-to(medium) {
+  .map {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+
+  .map__content {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    min-height: 400px;
+    margin-bottom: 0;
+    padding: 70px 35px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 27px 0 rgba(color(black), 0.15);
+  }
+
+  .map__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    height: 100%;
+    background-color: color(light);
+  }
+}
+
+@include respond-to(large) {
+  .map__content {
+    width: 360px;
+    min-height: 470px;
+    padding: 90px 45px;
+  }
+
+  .map__text {
+    padding-left: 35px;
+  }
+}

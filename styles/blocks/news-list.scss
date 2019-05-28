@@ -1,0 +1,40 @@
+.news-list {
+  @include ul-no;
+}
+
+.news-list__item {
+  margin-bottom: 20px;
+}
+
+@include respond-to(small-lg) {
+  .news-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-bottom: -20px;
+  }
+
+  .news-list__item {
+    width: 50%;
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+}
+
+@include respond-to(medium) {
+  .news-list {
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+
+  .news-list__item {
+    margin-bottom: 30px;
+    padding-right: 30px;
+  }
+}
+
+@include respond-to(medium-lg) {
+  .news-list__item {
+    width: 33.33%;
+  }
+}

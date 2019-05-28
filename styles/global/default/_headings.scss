@@ -1,15 +1,15 @@
 // по умолчанию и для статей
 $heading-styles: (
   small: (
-    h1: (fs: 24px, lh: 1.2, mb: 18px, mt: 0,    fw: 500),
-    h2: (fs: 24px, lh: 1.2, mb: 18px, mt: 30px, fw: 500),
+    h1: (fs: 28px, lh: 1.3, mb: 30px, mt: 0,    fw: 500),
+    h2: (fs: 24px, lh: 1.3, mb: 18px, mt: 30px, fw: 500),
     h3: (fs: 18px, lh: 1.3, mb: 16px, mt: 30px, fw: 500),
     h4: (fs: 14px, lh: 1.4, mb: 14px, mt: 20px, fw: 500),
     h5: (fs: 14px, lh: 1.4, mb: 12px, mt: 10px, fw: 500),
     h6: (fs: 14px, lh: 1.4, mb: 10px, mt: 10px, fw: 500)
   ),
   medium: (
-    h1: (fs: 30px, mb: 24px, mt: 0),
+    h1: (fs: 32px, mb: 40px, mt: 0),
     h2: (fs: 30px, mb: 24px, mt: 40px),
     h3: (fs: 18px, mb: 18px, mt: 40px),
     h4: (fs: 14px, mb: 16px, mt: 30px),
@@ -17,7 +17,7 @@ $heading-styles: (
     h6: (fs: 14px, mb: 12px, mt: 20px)
   ),
   large: (
-    h1: (fs: 36px, mb: 30px, mt: 0),
+    h1: (fs: 36px, mb: 50px, mt: 0),
     h2: (fs: 36px, mb: 30px, mt: 50px),
     h3: (fs: 18px, mb: 20px, mt: 50px),
     h4: (fs: 14px, mb: 18px, mt: 40px),

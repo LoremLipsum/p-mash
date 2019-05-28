@@ -131,6 +131,151 @@ picturefill();
 
 })();
 
+'use strict';
+
+(function() {
+
+  var map = document.querySelector('#map');
+
+  if(map) {
+    ymaps.ready(function () {
+      var map = new ymaps.Map('map', {
+        center: [55.612934, 37.972380],
+        zoom: 18,
+        scrollZoom: false,
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+      Placemark = new ymaps.Placemark([55.612934, 37.972380], {
+        balloonContent: '140060, Московская обл., Люберецкий р-н., ул. Ленина, 52, оф. 324'
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'assets/images/pin-icon.png',
+        iconImageSize: [30, 40],
+        iconImageOffset: [-15, -40],
+      });
+
+      map.geoObjects.add(Placemark);
+      map.behaviors.disable('scrollZoom');
+      map.controls.add('zoomControl');
+      var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+      map.controls.get('zoomControl').options.set('size', 'small');
+    });
+  }
+
+})();
+
+'use strict';
+
+(function() {
+
+  var modals = document.querySelectorAll('.js-modal');
+
+  if (modals.length) {
+    var btnsClose = document.querySelectorAll('.js-modal-close');
+    var overlays = document.querySelectorAll('.js-modal-overlay');
+
+    var btnsCallback = document.querySelectorAll('.js-callback-button');
+    var callback = document.querySelector('.js-modal-callback');
+    var ESC = 27;
+
+    var close = function() {
+      for (var i = 0; i < modals.length; i += 1) {
+        modals[i].classList.remove('active');
+      }
+    }
+
+    // Закрывает модальное окно по клику на крестик
+    for (var i = 0; i < btnsClose.length; i += 1) {
+      btnsClose[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        e.currentTarget.parentNode.parentNode.classList.remove('active');
+      });
+    }
+
+    // Закрывает модальное окно по клику на оверлей
+    for (var i = 0; i < overlays.length; i += 1) {
+      overlays[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        e.currentTarget.parentNode.classList.remove('active');
+      });
+    }
+
+    var onEscKeyup = function(e) {
+      if (e.keyCode === ESC) {
+        e.preventDefault();
+        close();
+      }
+    };
+
+    document.addEventListener('keyup', onEscKeyup);
+
+    for (var i = 0; i < btnsCallback.length; i += 1) {
+      btnsCallback[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        callback.classList.add('active');
+      });
+    }
+  }
+
+})();
+
+'use strict';
+
+(function() {
+
+  var header = document.querySelector('.header');
+  var btnSm = header.querySelector('.js-search-sm-open');
+  var fieldSm = header.querySelector('.js-search-sm');
+  var btnLg = header.querySelector('.js-search-lg-open');
+  var fieldLg = header.querySelector('.js-search-lg');
+  var btnsSubmit = header.querySelectorAll('.js-search-submit');
+
+  var ESC = 27;
+
+  var open = function(item) {
+    item.classList.add('active');
+  }
+
+  var close = function(item) {
+    item.classList.remove('active');
+  }
+
+  btnSm.addEventListener('click', function(e) {
+    e.preventDefault();
+    open(fieldSm);
+  });
+
+  btnLg.addEventListener('click', function(e) {
+    e.preventDefault();
+    open(fieldLg);
+  });
+
+
+  for (var i = 0; i < btnsSubmit.length; i += 1) {
+    btnsSubmit[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      e.currentTarget.parentNode.parentNode.classList.remove('active');
+    });
+  }
+
+  var onEscKeyup = function(e) {
+    if (e.keyCode === ESC) {
+      e.preventDefault();
+      if (fieldSm.classList.contains('active')) {
+        close(fieldSm);
+      }
+      if (fieldLg.classList.contains('active')) {
+        close(fieldLg);
+      }
+    }
+  };
+
+  document.addEventListener('keyup', onEscKeyup);
+
+})();
+
 (function($) {
 	'use strict';
 	$(function() {

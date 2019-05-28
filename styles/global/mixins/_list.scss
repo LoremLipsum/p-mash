@@ -7,8 +7,9 @@
   padding: 0;
 
   li {
+    list-style-type: none;
+
     &::before {
-      list-style-type: none;
       display: none;
     }
   }
