@@ -69,10 +69,26 @@
   margin-bottom: 0;
   margin-right: 10px;
   text-align: center;
-  @include list-no;
+  @include ul-no;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &--search {
+    position: relative;
+  }
+}
+
+.header__search {
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  z-index: 1;
+  display: none;
+
+  &.active {
+    display: block;
   }
 }
 
@@ -169,15 +185,6 @@
 .header__overlay {
   z-index: 11;
 }
-
-// .header__search {
-//   display: none;
-//   margin-top: 20px;
-//
-//   &.active {
-//     display: block;
-//   }
-// }
 
 @include respond-to(small-lg) {
   .header__middle-inner {

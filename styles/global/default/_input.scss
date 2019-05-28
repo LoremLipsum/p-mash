@@ -5,4 +5,6 @@ input {
   color: inherit;
   text-transform: inherit;
   transition: duration(md) func(primary);
+  caret-color: color(black);
+  outline: none;
 }

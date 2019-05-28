@@ -1,16 +1,23 @@
 .article {
-	> *:first-child {
-		margin-top: 0 !important;
-	}
+	@include first-last;
 
-	> *:last-child {
-		margin-bottom: 0 !important;
-	}
+  img {
+    display: inline-block;
+    border: 1px solid color(light-border);
+  }
 }
 
-@include respond-to(medium) {
+@include respond-to(medium-lg) {
   .article {
+    .float-left {
+      float: left;
+      margin-right: 30px;
+    }
 
+    .float-right {
+      float: right;
+      margin-left: 30px;
+    }
   }
 }
 

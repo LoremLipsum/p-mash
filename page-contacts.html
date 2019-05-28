@@ -186,6 +186,66 @@
         </div>
         <div class="map__map" id="map"></div>
       </div>
+      <section class="writeus">
+        <div class="writeus__wrap">
+          <h2 class="writeus__heading">Обратная связь
+          </h2>
+          <form action="/" method="post" accept-charset="UTF-8">
+            <div class="writeus__row">
+              <div class="writeus__field-group">
+                <label class="field field--with-icon writeus__field">
+                  <span class="hidden">Ваше имя
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Ваше имя" name="user" type="text" aria-required="true" aria-invalid="false">
+                  <span class="field__icon-wrap">
+                    <svg class="field__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+                    </svg>
+                  </span>
+                  <span class="field__line">
+                  </span>
+                </label>
+                <label class="field field--with-icon writeus__field">
+                  <span class="hidden">E-mail
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="E-mail" name="email" type="email" aria-required="true" aria-invalid="false">
+                  <span class="field__icon-wrap">
+                    <svg class="field__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#email"></use>
+                    </svg>
+                  </span>
+                  <span class="field__line">
+                  </span>
+                </label>
+                <label class="field field--with-icon writeus__field writeus__field--message">
+                  <span class="hidden">Сообщение
+                  </span>
+                  <textarea class="field__input" tabindex="0" placeholder="Сообщение" name="message" aria-required="true" aria-invalid="false">
+                  </textarea>
+                  <span class="field__icon-wrap">
+                    <svg class="field__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#message"></use>
+                    </svg>
+                  </span>
+                  <span class="field__line">
+                  </span>
+                </label>
+              </div>
+              <label class="button button--bg-primary button--large writeus__submit">
+                <input class="hidden" type="submit">
+                Отправить
+              </label>
+            </div>
+            <div class="writeus__confirm">
+              <label class="checkbox-confirm">
+                <input class="hidden checkbox-confirm__input" name="confirm" checked type="checkbox" aria-required="true" aria-invalid="false">
+                <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                </span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__top">

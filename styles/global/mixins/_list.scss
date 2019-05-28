@@ -1,7 +1,3 @@
-@mixin list-no {
-  list-style: none;
-}
-
 @mixin ol-no {
   margin: 0;
   padding: 0;
@@ -18,6 +14,7 @@
 @mixin ul-no {
   margin: 0;
   padding: 0;
+  list-style: none;
 
   li {
     list-style-type: none;

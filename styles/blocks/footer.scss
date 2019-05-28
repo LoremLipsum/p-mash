@@ -70,7 +70,7 @@
 }
 
 .footer__item {
-  @include list-no;
+  @include ul-no;
   font-size: 14px;
 
   &:last-child {

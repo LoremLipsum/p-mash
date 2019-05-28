@@ -24,23 +24,21 @@
 @import "../pug/blocks/logo/logo";
 @import "../pug/blocks/main-nav/main-nav";
 @import "../pug/blocks/button/button";
-@import "../pug/blocks/header/header";
 @import "../pug/blocks/button-icon/button-icon";
 @import "../pug/blocks/social/social";
 @import "../pug/blocks/search/search";
 @import "../pug/blocks/callback/callback";
 @import "../pug/blocks/form/form";
 @import "../pug/blocks/field/field";
-
+@import "../pug/blocks/date/date";
+@import "../pug/blocks/header/header";
 @import "../pug/blocks/intro/intro";
 @import "../pug/blocks/footer/footer";
 @import "../pug/blocks/process-item/process-item";
 @import "../pug/blocks/process/process";
-
 @import "../pug/blocks/process-circle/process-circle";
 @import "../pug/blocks/circle-small/circle-small";
 @import "../pug/blocks/circle-large/circle-large";
-
 @import "../pug/blocks/statistic/statistic";
 @import "../pug/blocks/statistic-item/statistic-item";
 @import "../pug/blocks/statistic-circle/statistic-circle";
@@ -48,15 +46,15 @@
 @import "../pug/blocks/service-item/service-item";
 @import "../pug/blocks/service-circle/service-circle";
 @import "../pug/blocks/writeus/writeus";
-
 @import "../pug/blocks/features/features";
 @import "../pug/blocks/features-item/features-item";
 @import "../pug/blocks/catalog-nav/catalog-nav";
 @import "../pug/blocks/catalog-slider/catalog-slider";
 @import "../pug/blocks/catalog-item/catalog-item";
 @import "../pug/blocks/catalog/catalog";
-
 @import "../pug/blocks/map/map";
 @import "../pug/blocks/news-list/news-list";
 @import "../pug/blocks/news-card/news-card";
-@import "../pug/blocks/date/date";
+@import "../pug/blocks/pagination/pagination";
+@import "../pug/blocks/breadcrumbs/breadcrumbs";
+@import "../pug/blocks/modal/modal";
