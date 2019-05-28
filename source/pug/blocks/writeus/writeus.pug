@@ -7,7 +7,11 @@ mixin writeus(data)
         js: data.js,
     })&attributes(attributes)
         .writeus__wrap
-            h2.writeus__heading Напишите нам
+            +el({
+                tag: 'h2',
+                class: 'writeus__heading',
+                text: data.heading
+            })
             +f({
 
             })
@@ -43,7 +47,7 @@ mixin writeus(data)
                         mix: 'writeus__submit',
                         mod: ['bg-primary', 'large'],
                         type: 'submit',
-                        text: 'Проконсультироваться'
+                        text: data.submit
                     })
                 .writeus__confirm
                     +checkbox-confirm({

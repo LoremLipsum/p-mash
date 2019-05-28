@@ -5,6 +5,14 @@
   &--no-pads-bottom {
     padding-bottom: 0 !important;
   }
+
+  &--news-list {
+    padding-bottom: 0 !important;
+
+    .content__wrap {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .content__wrap {
@@ -44,6 +52,12 @@
   .content {
     padding-top: 55px;
     padding-bottom: 40px;
+
+    &--news-list {
+      .content__wrap {
+        margin-bottom: 40px;
+      }
+    }
   }
 
   .content__heading {
@@ -60,6 +74,12 @@
   .content {
     padding-top: 65px;
     padding-bottom: 50px;
+
+    &--news-list {
+      .content__wrap {
+        margin-bottom: 50px;
+      }
+    }
   }
 
   .content__heading {
