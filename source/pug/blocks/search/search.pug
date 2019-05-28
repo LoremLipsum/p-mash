@@ -6,16 +6,16 @@ mixin search(data)
         js: data.js,
     })&attributes(attributes)
         +f({})
-            +field({
+            +el({
+                tag: 'input',
                 type: 'search',
-                mod: 'bg-light',
-                mix: 'field__search',
+                mix: 'search__field',
                 placeholder: 'Поиск',
             })
-            +button({
+            +button-icon({
                 mix: 'search__button',
                 type: 'submit',
                 icon: 'search',
-                mod: 'submit',
-                js: 'submit-search'
+                mod: 'bg-gray',
+                js: 'search-submit'
             })

@@ -1,0 +1,17 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Продмаш'
+    - var pageId = 1
+
+block content
+    main.content.content--no-pads-bottom
+        .content__wrap
+            //- +breadcrumbs({
+            //-     mix: 'content__breadcrumbs',
+            //-     items: ['Главная','Новости']
+            //- })
+            h1.content__heading Контакты
+        +map({
+
+        })

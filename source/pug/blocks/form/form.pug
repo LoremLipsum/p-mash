@@ -2,7 +2,7 @@ mixin form(data)
     +f({
         class: 'form',
     })
-        .form__inner
+        .form__group
             if data.firstName
                 +field({
                     mix: 'form__field',
@@ -64,20 +64,19 @@ mixin form(data)
                     required: true,
                     placeholder: data.message
                 })(aria-required='true', aria-invalid='false')
-            if data.confirm
-                .form__confirm
-                    +checkbox-confirm({
-                        mod: 'small',
-                        label: 'Согласие на обработку персональных данных',
-                        checked: true,
-                    })
-            +el({
-                class: 'form__submit-wrap',
-                mod: data.modSubmit
+        +el({
+            class: 'form__submit-wrap',
+            mod: data.modSubmit
+        })
+            +button({
+                mix: 'form__submit',
+                mod: ['bg-primary', 'large'],
+                type: 'submit',
+                text: data.submit
             })
-                +button({
-                    mix: 'form__submit',
-                    mod: ['bg-primary', 'large'],
-                    type: 'submit',
-                    text: data.submit
+        if data.confirm
+            .form__confirm-wrap
+                +checkbox-confirm({
+                    mix: 'form__confirm',
+                    label: 'Согласие на обработку персональных данных',
                 })

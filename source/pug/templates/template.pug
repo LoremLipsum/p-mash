@@ -17,5 +17,19 @@ html(lang="ru-RU")
         block content
         block footer
             +footer({})
+        block modal
+            +modal({
+                js: 'modal-callback',
+                heading: 'Заказать звонок',
+            })
+                +form({
+                    firstName: true,
+                    tel: true,
+                    submit: 'Заказать',
+                    modField: ['with-icon', 'border-transparent'],
+                    mix: 'modal__form',
+                    confirm: true,
+                })
+        block modalPage
         block scripts
             +scripts()

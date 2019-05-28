@@ -21,17 +21,23 @@ mixin header(data)
                     })
                     .header__top-column
                         ul.header__list.header__list--top
-                            li.header__item
+                            li.header__item.header__item--search
                                 +button-icon({
-                                    mod: 'bg-primary',
+                                    mod: 'bg-gray',
                                     icon: 'search',
-                                    title: 'Поиск'
+                                    title: 'Поиск',
+                                    js: 'search-sm-open',
+                                })
+                                +search({
+                                    mix: 'header__search',
+                                    js: 'search-sm'
                                 })
                             li.header__item
                                 +button-icon({
-                                    mod: 'bg-gray',
+                                    mod: 'bg-primary',
                                     icon: 'phone',
                                     title: 'Позвонить',
+                                    js: 'callback-button',
                                 })
         .header__middle
             .header__wrap
@@ -44,17 +50,23 @@ mixin header(data)
                     .header__address.header__address--middle
                         | Московская область <br>Люберецкий район <br>ул. Ленина, 52, оф. 324
                     ul.header__list.header__list--middle
-                        li.header__item
+                        li.header__item.header__item--search
                             +button-icon({
-                                mod: 'bg-primary',
+                                mod: 'bg-gray',
                                 icon: 'search',
-                                title: 'Поиск'
+                                title: 'Поиск',
+                                js: 'search-lg-open',
+                            })
+                            +search({
+                                mix: 'header__search',
+                                js: 'search-lg'
                             })
                         li.header__item
                             +button-icon({
-                                mod: 'bg-gray',
+                                mod: 'bg-primary',
                                 icon: 'phone',
                                 title: 'Позвонить',
+                                js: 'callback-button',
                             })
                     .header__contacts.header__contacts--middle
                         +phone({

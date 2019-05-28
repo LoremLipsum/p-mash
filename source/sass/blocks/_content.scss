@@ -1,8 +1,8 @@
 .content {
-  padding-top: 35px;
-  padding-bottom: 60px;
+  padding-top: 45px;
+  padding-bottom: 30px;
 
-  &--no-bottom-space {
+  &--no-pads-bottom {
     padding-bottom: 0 !important;
   }
 }
@@ -12,20 +12,17 @@
 }
 
 .content__breadcrumbs {
-
+  margin-top: -35px;
+  margin-bottom: 20px;
 }
 
 .content__heading {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .content__pagination {
-  &--space-before {
-    margin-top: 20px;
-  }
-
-  &--space-after {
-    margin-bottom: 40px;
-  }
+  margin-top: 30px;
 }
 
 .content__button-bottom-wrap {
@@ -37,32 +34,39 @@
   width: 100%;
 }
 
-
-.content__contacts {
-  // margin-bottom: 50px;
-}
-
-.content__catalog-nav {
-  margin-bottom: 20px;
+@include respond-to(small-lg) {
+  .content__heading {
+    text-align: left;
+  }
 }
 
 @include respond-to(medium) {
   .content {
+    padding-top: 55px;
+    padding-bottom: 40px;
   }
 
-  .content__with-aside,
-  .content__brends,
-  .content__assortiment,
-  .content__view {
+  .content__heading {
     margin-bottom: 40px;
+    text-align: left;
   }
 
-}
-
-@include respond-to(medium-lg) {
-
+  .content__pagination {
+    margin-top: 40px;
+  }
 }
 
 @include respond-to(large) {
+  .content {
+    padding-top: 65px;
+    padding-bottom: 50px;
+  }
 
+  .content__heading {
+    margin-bottom: 50px;
+  }
+
+  .content__pagination {
+    margin-top: 50px;
+  }
 }

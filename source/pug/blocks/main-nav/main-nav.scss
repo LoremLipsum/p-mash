@@ -12,7 +12,7 @@
   line-height: 20px;
   font-weight: 500;
   text-transform: uppercase;
-  @include list-no;
+  @include ul-no;
 
   &:last-child {
     margin-bottom: 0;

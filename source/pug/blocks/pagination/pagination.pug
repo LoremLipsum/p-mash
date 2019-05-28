@@ -1,0 +1,49 @@
+mixin pagination-item(data)
+    +el({
+        tag: 'li',
+        class: 'pagination__item',
+        mod: data.mod,
+        mix: data.mix,
+    })
+        +el({
+            tag: data.tag ? data.tag : 'a',
+            class: 'pagination__link',
+            text: data.text,
+        })
+
+mixin pagination(data)
+    +el({
+        class: 'pagination',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +control({
+            tag: 'button',
+            mod: ['prev', 'bg-transparent', 'large'],
+            mix: 'pagination__control disabled',
+            title: 'Назад'
+        })(tabindex='0')
+        +el({
+            tag: 'ul',
+            class: 'pagination__list',
+        })
+            +pagination-item({
+                text: '1',
+                mix: 'active',
+            })
+            +pagination-item({
+                text: '2',
+            })
+            +pagination-item({
+                text: '3',
+            })
+            +pagination-item({
+                text: '4',
+            })
+        +control({
+            tag: 'button',
+            mod: ['next', 'bg-transparent', 'large'],
+            mix: 'pagination__control',
+            title: 'Вперед'
+        })(tabindex='0')

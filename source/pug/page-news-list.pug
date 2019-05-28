@@ -1,8 +1,8 @@
 extends ./templates/template
 
 block vars
-    - var pageTitle = 'Бандит'
-    - var pageId = 8
+    - var pageTitle = 'Продмаш'
+    - var pageId = 4
 
 block content
     main.content
@@ -12,3 +12,9 @@ block content
             //-     items: ['Главная','Новости']
             //- })
             h1.content__heading Новости
+            +news-list({
+                items: news
+            })
+            +pagination({
+                mix: 'content__pagination',
+            })

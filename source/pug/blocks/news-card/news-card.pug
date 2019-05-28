@@ -1,0 +1,34 @@
+mixin news-card(data)
+    +el({
+        tag: 'article',
+        class: 'news-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'a',
+            href: 'news-card.html',
+            class: 'news-card__image-wrap',
+        })
+            img.news-card__image(src='./assets/upload/' + data.image, alt='')
+        .news-card__content
+            +date({
+                mix: 'news-card__date',
+                text: data.date,
+            })
+            +el({
+                tag: 'h3',
+                mix: 'news-card__heading',
+                before: {
+                    tag: 'a',
+                    class: 'news-card__heading-link',
+                    text: data.heading
+                }
+            })
+            +el({
+                tag: 'p',
+                class: 'news-card__text',
+                text: data.text,
+            })
+                block

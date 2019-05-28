@@ -10,11 +10,11 @@ mixin checkbox-confirm(data)
             tag: 'input',
             class: 'hidden checkbox-confirm__input',
             type: 'checkbox',
-            checked: data.checked,
-            name: data.checked,
+            checked: true,
+            name: 'confirm',
         })&attributes(attributes)
         +el({
             tag: 'span',
             class: 'checkbox-confirm__label',
-            text: data.label
+            text: 'Согласие на обработку персональных данных'
         })

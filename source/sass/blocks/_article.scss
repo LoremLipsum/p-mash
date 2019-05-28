@@ -1,15 +1,23 @@
 .article {
+	@include first-last;
+
   img {
-    min-height: 200px;
-    width: 100%;
-    height: 100%;
-    @include ofi(cover, center);
+    display: inline-block;
+    border: 1px solid color(light-border);
   }
 }
 
-@include respond-to(medium) {
+@include respond-to(medium-lg) {
   .article {
+    .float-left {
+      float: left;
+      margin-right: 30px;
+    }
 
+    .float-right {
+      float: right;
+      margin-left: 30px;
+    }
   }
 }
 

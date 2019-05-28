@@ -1,0 +1,16 @@
+mixin news-list(data)
+    +el({
+        tag: 'ul',
+        class: 'news-list',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            li.news-list__item
+                +news-card({
+                    image: item.image,
+                    date: item.date,
+                    heading: item.heading,
+                    text: item.text
+                })

@@ -1,0 +1,54 @@
+mixin map(data)
+    +el({
+        class: 'map',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+        .map__wrap
+            .map__content
+                p.map__text
+                    +el({
+                        tag: 'svg',
+                        class: 'map__icon',
+                        icon: 'location'
+                    })
+                    |140060, Московская обл.,
+                    |
+                    br
+                    |Люберецкий р-н., ул.
+                    |
+                    br
+                    |Ленина, 52, оф. 324
+                p.map__text
+                    +el({
+                        tag: 'svg',
+                        class: 'map__icon',
+                        icon: 'phone'
+                    })
+                    +el({
+                        tag: 'a',
+                        class: 'map__link',
+                        href: 'tel:+79295407124',
+                        text: '+7 (929) 540-71-24'
+                    })
+                    +el({
+                        tag: 'a',
+                        class: 'map__link',
+                        href: 'tel:+74992816944',
+                        text: '+7 (499) 281-69-44'
+                    })
+                p.map__text
+                    +el({
+                        tag: 'svg',
+                        class: 'map__icon',
+                        icon: 'email-fill'
+                    })
+                    +el({
+                        tag: 'a',
+                        class: 'map__link',
+                        href: 'mailto:zavodprodmash@mail.ru',
+                        text: 'zavodprodmash@mail.ru'
+                    })
+        .map__map#map
