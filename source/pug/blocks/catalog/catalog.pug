@@ -1,18 +1,46 @@
 mixin catalog(data)
     +el({
+        tag: 'section',
         class: 'catalog',
         mix: data.mix,
         js: data.js,
         mod: data.mod,
     })&attributes(attributes)
         .catalog__wrap
-            .catalog__inner
-                +catalog-nav({
-                    mix: 'catalog__nav',
-                    items: catalogNav,
-                })
-                +catalog-slider({
-                    items: catalogSlider,
-                    mix: 'catalog__slider',
-                    js: 'catalog-slider'
-                })
+            h2.catalog__subheading Оборудование собственного производства
+            .catalog__aside-main-wrap
+                aside.catalog__aside
+                    +catalog-nav({
+                        mix: 'catalog__nav',
+                        js: 'catalog-nav'
+                    })
+                        +catalog-nav-link({
+                            text: 'Автоматические закаточные машины',
+                            js: 'show-item',
+                            mix: 'active'
+                        })
+                        +catalog-nav-link({
+                            text: 'Полуавтоматические закаточные машины',
+                            js: 'show-item',
+                        })
+                        +catalog-nav-link({
+                            text: 'Укупорочные машины',
+                            js: 'show-item',
+                        })
+                        +catalog-nav-link({
+                            text: 'Агрегаты дозировочно-закаточные',
+                            js: 'show-item',
+                        })
+                        +catalog-nav-link({
+                            text: 'Дозировочно-наполнительные машины',
+                            js: 'show-item',
+                        })
+                        +catalog-nav-link({
+                            text: 'Запчасти для закаточных машин',
+                            js: 'show-item',
+                        })
+                .catalog__main
+                    +catalog-list({
+                        items: catalog,
+                        mix: 'catalog__list',
+                    })

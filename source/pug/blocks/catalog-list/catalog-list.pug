@@ -1,0 +1,14 @@
+mixin catalog-list(data)
+    +el({
+        tag: 'ul',
+        class: 'catalog-list',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            li.catalog-list__item
+                +catalog-item({
+                    image: item.image,
+                    heading: item.heading,
+                })

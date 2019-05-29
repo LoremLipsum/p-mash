@@ -1,0 +1,91 @@
+mixin catalog-main(data)
+    +el({
+        tag: 'section',
+        class: 'catalog-main',
+        mix: data.mix,
+        js: data.js,
+        mod: data.mod,
+    })&attributes(attributes)
+        .catalog-main__wrap
+            +el({
+                tag: 'h2',
+                class: 'catalog-main__heading',
+                text: 'Каталог',
+            })
+            .catalog-main__row
+                +catalog-nav({
+                    mix: 'catalog-main__nav',
+                    js: 'catalog-nav'
+                })
+                    +catalog-nav-tab({
+                        js: 'show-item',
+                        jsLink: 'tabs-button',
+                        text: 'Автоматические закаточные машины',
+                        mix: 'active',
+                    })(data-tab='tab-1')
+                    +catalog-nav-tab({
+                        js: 'show-item',
+                        jsLink: 'tabs-button',
+                        text: 'Полуавтоматические закаточные машины',
+                    })(data-tab='tab-2')
+                    +catalog-nav-tab({
+                        js: 'show-item',
+                        jsLink: 'tabs-button',
+                        text: 'Укупорочные машины',
+                    })(data-tab='tab-3')
+                    +catalog-nav-tab({
+                        js: 'show-item',
+                        jsLink: 'tabs-button',
+                        text: 'Агрегаты дозировочно-закаточные',
+                    })(data-tab='tab-4')
+                    +catalog-nav-tab({
+                        js: 'show-item',
+                        jsLink: 'tabs-button',
+                        text: 'Дозировочно-наполнительные машины',
+                    })(data-tab='tab-5')
+                    +catalog-nav-tab({
+                        js: 'show-item',
+                        jsLink: 'tabs-button',
+                        text: 'Запчасти для закаточных машин',
+                    })(data-tab='tab-6')
+                    +catalog-nav-tab({
+                        js: 'show-item',
+                        jsLink: 'tabs-button',
+                        text: 'Импортное оборудование',
+                    })(data-tab='tab-7')
+                .catalog-main__main
+                    .tab-1.js-tabs-content.active
+                        +catalog-slider({
+                            items: catalogSlider1,
+                            js: 'catalog-slider'
+                        })
+                    .tab-2.js-tabs-content
+                        +catalog-slider({
+                            items: catalogSlider2,
+                            js: 'catalog-slider'
+                        })
+                    .tab-3.js-tabs-content
+                        +catalog-slider({
+                            items: catalogSlider3,
+                            js: 'catalog-slider'
+                        })
+                    .tab-4.js-tabs-content
+                        +catalog-slider({
+                            items: catalogSlider2,
+                            js: 'catalog-slider'
+                        })
+                    .tab-5.js-tabs-content
+                        +catalog-slider({
+                            items: catalogSlider1,
+                            js: 'catalog-slider'
+                        })
+                    .tab-6.js-tabs-content
+                        +catalog-slider({
+                            items: catalogSlider3,
+                            js: 'catalog-slider'
+                        })
+                    .tab-7.js-tabs-content
+                        +catalog-slider({
+                            items: catalogSlider1,
+                            js: 'catalog-slider'
+                        })

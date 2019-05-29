@@ -21,19 +21,18 @@ mixin main-nav(data)
                 -var active = ''
             +item(className, item, active)
                 if item.items
-                    +el({
-                        tag: 'ul',
-                        class: className + '__secondary',
+                    +main-nav-lvl-2({
+                        items: item.items,
+                        mix: 'main-nav__lvl-2',
                     })
-                        each itemSecondary in item.items
-                            +item(className, itemSecondary, '')
 
 mixin item(classItem, data, active)
     +el({
         tag: 'li',
-        class: classItem + '__item' + active,
+        class: classItem + '__item',
         mod: data.mod,
-        mix: data.mix,
+        mix: active,
+        js: data.js,
     })(itemprop='name')
         +el({
             tag: data.tag ? data.tag : 'a',
@@ -43,7 +42,8 @@ mixin item(classItem, data, active)
             title: data.title,
             text: data.text,
             before: data.before,
-            after: data.after
+            after: data.after,
+            js: data.jsLink
         })(itemprop='url')
             if data.icon
                 +el({

@@ -4,41 +4,46 @@ mixin header(data)
         class: 'header',
         mix: data.mix,
         mod: data.mod,
-        js: data.js,
+        js: 'header',
     })&attributes(attributes)
-        .header__top.js-top-header
+        .header__top.js-header-top
             .header__wrap
-                .header__top-inner
-                    .header__top-column
-                        +button-nav({
-                            mix: 'header__button-nav',
-                            js: 'open-nav',
-                        })
-                    +logo({
-                        small: true,
-                        mod: 'small',
-                        mix: 'header__logo-small'
+                .header__top-column
+                    +button-nav({
+                        mix: 'header__button-nav',
+                        js: 'open-nav',
                     })
-                    .header__top-column
-                        ul.header__list.header__list--top
-                            li.header__item.header__item--search
-                                +button-icon({
-                                    mod: 'bg-gray',
-                                    icon: 'search',
-                                    title: 'Поиск',
-                                    js: 'search-sm-open',
+                +logo({
+                    small: true,
+                    mod: 'small',
+                    mix: 'header__logo-small',
+                    js: 'logo-small',
+                })
+                .header__top-column
+                    ul.header__list.header__list--top
+                        li.header__item
+                            +button-icon({
+                                mod: 'bg-gray',
+                                icon: 'search',
+                                title: 'Поиск',
+                                js: 'search-sm-open',
+                            })
+                            .header__search-wrap.js-search-sm
+                                +button-close({
+                                    mix: 'header__search-close',
+                                    title: 'Закрыть главное меню',
+                                    js: 'close-search'
                                 })
                                 +search({
                                     mix: 'header__search',
-                                    js: 'search-sm'
                                 })
-                            li.header__item
-                                +button-icon({
-                                    mod: 'bg-primary',
-                                    icon: 'phone',
-                                    title: 'Позвонить',
-                                    js: 'callback-button',
-                                })
+                        li.header__item
+                            +button-icon({
+                                mod: 'bg-primary',
+                                icon: 'phone',
+                                title: 'Позвонить',
+                                js: 'callback-button',
+                            })
         .header__middle
             .header__wrap
                 .header__middle-inner

@@ -1,0 +1,18 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Продмаш'
+    - var pageId = 2
+
+block content
+    main.content
+        .content__wrap
+            h1.content__heading Оборудование
+
+        +catalog({
+            mix: 'content__catalog',
+        })
+        +writeus({
+            heading: 'Напишите нам',
+            submit: 'Проконсультироваться',
+        })

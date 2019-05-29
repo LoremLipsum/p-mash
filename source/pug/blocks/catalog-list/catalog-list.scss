@@ -1,0 +1,31 @@
+.catalog-list {
+  @include ul-no;
+  margin-bottom: -30px;
+}
+
+.catalog-list__item {
+  margin-bottom: 30px;
+}
+
+@include respond-to(medium) {
+
+}
+
+@include respond-to(small-lg) {
+  .catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+
+  .catalog-list__item {
+    width: 50%;
+    padding-right: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .catalog-list__item {
+    width: 33.33%;
+  }
+}

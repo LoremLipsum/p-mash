@@ -1,5 +1,6 @@
 .header {
   border-bottom: 1px solid color(light);
+  background-color: color(white);
 }
 
 .header__wrap {
@@ -7,7 +8,7 @@
 }
 
 .header__top {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
@@ -19,6 +20,7 @@
   color: color(black);
 
   &.active {
+    position: fixed;
     border-bottom: none;
     box-shadow: 0 0 15px 0 rgba(#6d6f7b, 0.3);
 
@@ -26,12 +28,12 @@
       display: block;
     }
   }
-}
 
-.header__top-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .header__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .header__top-column {
@@ -74,22 +76,34 @@
   &:last-child {
     margin-right: 0;
   }
-
-  &--search {
-    position: relative;
-  }
 }
 
-.header__search {
+.header__search-wrap {
   position: absolute;
-  right: -4px;
-  top: -4px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
   display: none;
+  padding: 8px 60px;
+  background-color: color(white);
+
+  .header__search {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 
   &.active {
     display: block;
   }
+}
+
+.header__search-close {
+  position: absolute;
+  top: 8px;
+  right: 5px;
 }
 
 .header__middle {
@@ -161,7 +175,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 320px;
-  height: 100vh;
+  min-height: 100vh;
   padding: 40px 0;
   background-color: color(white);
   overflow-y: auto;
@@ -224,7 +238,16 @@
 
 @include respond-to(large) {
   .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     border-bottom: none;
+
+    &.active {
+      position: fixed;
+    }
   }
 
   .header__top {
@@ -262,6 +285,10 @@
 
   .header__item {
     margin-right: 14px;
+
+    &--search {
+      position: relative;
+    }
   }
 
   .header__bottom {
@@ -277,7 +304,7 @@
     display: block;
     width: 100%;
     max-width: none;
-    height: auto;
+    min-height: 0;
     padding: 0;
     overflow-y: visible;
     transition: none;
@@ -289,5 +316,17 @@
 
   .header__main-nav {
     margin-bottom: 0;
+  }
+
+  .header__search {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    display: none;
+    width: 420px;
+
+    &.active {
+      display: block;
+    }
   }
 }

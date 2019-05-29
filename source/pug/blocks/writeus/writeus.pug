@@ -1,6 +1,5 @@
 mixin writeus(data)
     +el({
-        tag: 'section',
         class: 'writeus',
         mod: data.mod,
         mix: data.mix,
@@ -8,7 +7,6 @@ mixin writeus(data)
     })&attributes(attributes)
         .writeus__wrap
             +el({
-                tag: 'h2',
                 class: 'writeus__heading',
                 text: data.heading
             })

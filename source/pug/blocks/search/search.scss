@@ -1,6 +1,5 @@
 .search {
   position: relative;
-  width: 200px;
   height: 40px;
   padding: 4px 20px;
   padding-right: 40px;
@@ -30,16 +29,9 @@
 }
 
 
-@include respond-to(small-lg) {
-  .search {
-    width: 280px;
-  }
-}
-
 @include respond-to(large) {
   .search {
     height: 54px;
-    width: 430px;
     padding-right: 60px;
     padding-left: 30px;
     border-radius: 28px;

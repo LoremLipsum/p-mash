@@ -12,8 +12,8 @@
 			autoplaySpeed: 5000,
       infinite: true,
        adaptiveHeight: true,
-      prevArrow: '<button class="control control--prev" type="button" tabindex="0" aria-label="Назад"></button>',
-      nextArrow: '<button class="control control--next" type="button" tabindex="0" aria-label="Вперёд"></button>',
+      prevArrow: '<button class="control control--medium control--bg-gray control--prev" type="button" tabindex="0" aria-label="Назад"></button>',
+      nextArrow: '<button class="control control--medium control--bg-gray control--next" type="button" tabindex="0" aria-label="Вперёд"></button>',
       responsive: [
         {
           breakpoint: 1220,
@@ -22,9 +22,9 @@
           }
         },
         {
-          breakpoint: 920,
+          breakpoint: 540,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
           }
         },
       ]
