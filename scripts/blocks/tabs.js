@@ -2,12 +2,10 @@
 
 (function() {
 
-  var tabs = document.querySelector('.js-tabs');
+  var tabs = document.querySelectorAll('.js-tabs');
+  var tabsSmall= document.querySelectorAll('.js-tabs-small');
 
-  if(tabs) {
-    var btns = tabs.querySelectorAll('.js-tabs-button');
-    var contents = tabs.querySelectorAll('.js-tabs-content');
-
+  var switchTabs = function (item, btns, contents, classContents) {
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener('click', function (e) {
         e.preventDefault();
@@ -23,9 +21,42 @@
         };
 
         tab.parentNode.classList.add('active');
-        document.querySelector("." + atr).classList.add('active');
+        item.querySelector('.' + classContents + '.' + atr).classList.add('active');
       });
     }
+  };
+
+  var initTabs = function () {
+    if(tabs) {
+      for (var i = 0; i < tabs.length; i += 1) {
+        var btnsTabs = tabs[i].querySelectorAll('.js-tabs-button');
+        var contentsTabs = tabs[i].querySelectorAll('.js-tabs-content');
+        switchTabs(tabs[i], btnsTabs, contentsTabs, 'js-tabs-content');
+      }
+    }
   }
+
+  initTabs();
+
+  // табы на мобильной версии
+  var initTabsSmall = function() {
+    if(parseInt(window.innerWidth, 10) < 920) {
+      if(tabsSmall) {
+
+        for (var i = 0; i < tabsSmall.length; i += 1) {
+          var btnsTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-button');
+          var contentTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-small-content');
+          switchTabs(tabsSmall[i], btnsTabsSmall, contentTabsSmall, 'js-tabs-small-content');
+        }
+      }
+    }
+  };
+
+  initTabsSmall();
+
+  window.addEventListener('resize', function() {
+    initTabsSmall();
+  });
+
 
 })();

@@ -7,7 +7,9 @@
   var fieldSm = header.querySelector('.js-search-sm');
   var btnLg = header.querySelector('.js-search-lg-open');
   var fieldLg = header.querySelector('.js-search-lg');
-  var btnsSubmit = header.querySelectorAll('.js-search-submit');
+  var btnSubmitSm = fieldSm.querySelector('.js-search-submit');
+  var btnSubmitLg = fieldLg.querySelector('.js-search-submit');
+  var btnCLose = fieldSm.querySelector('.js-close-search');
 
   var ESC = 27;
 
@@ -29,13 +31,20 @@
     open(fieldLg);
   });
 
+  btnSubmitSm.addEventListener('click', function(e) {
+    e.preventDefault();
+    close(fieldSm);
+  });
 
-  for (var i = 0; i < btnsSubmit.length; i += 1) {
-    btnsSubmit[i].addEventListener('click', function(e) {
-      e.preventDefault();
-      e.currentTarget.parentNode.parentNode.classList.remove('active');
-    });
-  }
+  btnCLose.addEventListener('click', function(e) {
+    e.preventDefault();
+    close(fieldSm);
+  });
+
+  btnSubmitLg.addEventListener('click', function(e) {
+    e.preventDefault();
+    close(fieldLg);
+  });
 
   var onEscKeyup = function(e) {
     if (e.keyCode === ESC) {

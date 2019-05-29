@@ -1,5 +1,6 @@
 .article {
 	@include first-last;
+  padding-bottom: 40px;
 
   img {
     display: inline-block;

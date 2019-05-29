@@ -12,30 +12,34 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header__top js-top-header">
+    <header class="header js-header">
+      <div class="header__top js-header-top">
         <div class="header__wrap">
-          <div class="header__top-inner">
-            <div class="header__top-column">
-              <button class="btn-nav header__button-nav js-open-nav" aria-label="Открыть меню" type="button">
-                <span class="btn-nav__icon">
-                  <span class="btn-nav__lines">
-                  </span>
+          <div class="header__top-column">
+            <button class="btn-nav header__button-nav js-open-nav" aria-label="Открыть меню" type="button">
+              <span class="btn-nav__icon">
+                <span class="btn-nav__lines">
                 </span>
-              </button>
-            </div>
-            <a class="logo logo--small header__logo-small" title="Перейти на главную страницу" href="main.html">
-              <img class="logo__image" src="./assets/images/logo-small.svg" alt=" ">
-            </a>
-            <div class="header__top-column">
-              <ul class="header__list header__list--top">
-                <li class="header__item header__item--search">
-                  <button class="button-icon button-icon--bg-gray js-search-sm-open" title="Поиск" type="button">
-                    <svg class="button-icon__icon">
-                      <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
-                    </svg>
+              </span>
+            </button>
+          </div>
+          <a class="logo logo--small header__logo-small js-logo-small" title="Перейти на главную страницу" href="main.html">
+            <img class="logo__image" src="./assets/images/logo-small.svg" alt=" ">
+          </a>
+          <div class="header__top-column">
+            <ul class="header__list header__list--top">
+              <li class="header__item">
+                <button class="button-icon button-icon--bg-gray js-search-sm-open" title="Поиск" type="button">
+                  <svg class="button-icon__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                  </svg>
+                </button>
+                <div class="header__search-wrap js-search-sm">
+                  <button class="button-close header__search-close js-close-search" aria-label="Закрыть окно" type="button">
+                    <span class="button-close__icon">
+                    </span>
                   </button>
-                  <div class="search header__search js-search-sm">
+                  <div class="search header__search">
                     <form action="/" method="post" accept-charset="UTF-8">
                       <input class="search__field" placeholder="Поиск" type="search">
                       <button class="button-icon button-icon--bg-gray search__button js-search-submit" type="button">
@@ -45,16 +49,16 @@
                       </button>
                     </form>
                   </div>
-                </li>
-                <li class="header__item">
-                  <button class="button-icon button-icon--bg-primary js-callback-button" title="Позвонить" type="button">
-                    <svg class="button-icon__icon">
-                      <use xlink:href="./assets/images/sprites/sprite.svg#phone"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+              <li class="header__item">
+                <button class="button-icon button-icon--bg-primary js-callback-button" title="Позвонить" type="button">
+                  <svg class="button-icon__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#phone"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -115,13 +119,33 @@
                 <a class="main-nav__link" href="page-about.html" itemprop="url">О компании
                 </a>
               </li>
-              <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" href="page-equipment.html" itemprop="url">Оборудование
-                </a>
+              <li class="main-nav__item main-nav__item--lvl-2 js-main-nav-dropdown" itemprop="name">
+                <button class="main-nav__link js-main-nav-dropdown-button" type="button" itemprop="url">Оборудование
+                </button>
+                <ul class="main-nav-lvl-2 main-nav__lvl-2">
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Оборудование собственного производства
+                    </a>
+                  </li>
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Импортное оборудование
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" href="page-service.html" itemprop="url">Услуги
-                </a>
+              <li class="main-nav__item main-nav__item--lvl-2 js-main-nav-dropdown" itemprop="name">
+                <button class="main-nav__link js-main-nav-dropdown-button" type="button" itemprop="url">Услуги
+                </button>
+                <ul class="main-nav-lvl-2 main-nav__lvl-2">
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Оборудование собственного производства
+                    </a>
+                  </li>
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Импортное оборудование
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="main-nav__item active" itemprop="name">
                 <a class="main-nav__link" href="page-news.html" itemprop="url">Новости
@@ -329,113 +353,105 @@
     <footer class="footer">
       <div class="footer__top">
         <div class="footer__wrap">
-          <div class="footer__inner">
-            <div class="footer__row footer__row--company">
-              <div class="footer__col footer__col--left">
-                <a class="logo logo--secondary footer__logo" title="Перейти на главную страницу" href="main.html">
-                  <img class="logo__image" src="./assets/images/logo-secondary.svg" alt=" ">
-                </a>
-                <p class="footer__text footer__text--info">Производство технологического <br>оборудования <br>для консервных производств
-                </p>
-              </div>
-              <div class="footer__col footer__col--right">
-                <p class="footer__text">
-                  <a class="header__phone" href="tel:+79295407124">+7 (929) 540-71-24
-                  </a>
-                  <a class="header__phone" href="tel:+74992816944">+7 (499) 281-69-44
-                  </a>
-                </p>
-                <p class="footer__text footer__text--address">140060, Московская обл., <br>Люберецкий р-н., ул. Ленина, 52, оф.&nbsp;324
-                </p>
-                <p class="footer__text">
-                  <a href="mailto:tdpmts2016@mail.ru">tdpmts2016@mail.ru
-                  </a>
-                </p>
-              </div>
+          <div class="footer__company">
+            <div class="footer__info">
+              <a class="logo logo--secondary footer__logo" title="Перейти на главную страницу" href="main.html">
+                <img class="logo__image" src="./assets/images/logo-secondary.svg" alt=" ">
+              </a>
+              <p class="footer__text footer__text--info">Производство технологического <br>оборудования <br>для консервных производств
+              </p>
             </div>
-            <div class="footer__row footer__row--nav">
-              <div class="footer__col footer__col--left" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                <h4 class="footer__title">Компания</h4>
-                <ul class="footer__list">
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">О компании
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Производство
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Услуги
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Новости
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Статьи
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Контакты
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer__col footer__col--right" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                <h4 class="footer__title">Оборудование</h4>
-                <ul class="footer__list">
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Автоматические закаточные машины
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Полуавтоматические закаточные машины
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Укупорочные машины
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Агрегаты дозировочно-закаточные
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Дозировочно-наполнительные машины
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Запчасти для закаточных машин
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Импортное оборудование
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div class="footer__address">
+              <p class="footer__text">
+                <a class="header__phone" href="tel:+79295407124">+7 (929) 540-71-24
+                </a>
+                <a class="header__phone" href="tel:+74992816944">+7 (499) 281-69-44
+                </a>
+              </p>
+              <p class="footer__text footer__text--address">140060, Московская обл., <br>Люберецкий р-н., ул. Ленина, 52, оф.&nbsp;324
+              </p>
+              <p class="footer__text">
+                <a href="mailto:tdpmts2016@mail.ru">tdpmts2016@mail.ru
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="footer__nav" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--company js-footer-nav-dropdown">
+              <h4 class="footer__title js-footer-nav-dropdown-button">Компания</h4>
+              <ul class="footer__list">
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">О компании
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Производство
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Услуги
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Новости
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Статьи
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--equipment js-footer-nav-dropdown">
+              <h4 class="footer__title js-footer-nav-dropdown-button">Оборудование</h4>
+              <ul class="footer__list">
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Автоматические закаточные машины
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Полуавтоматические закаточные машины
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Укупорочные машины
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Агрегаты дозировочно-закаточные
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Дозировочно-наполнительные машины
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Запчасти для закаточных машин
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Импортное оборудование
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="footer__bottom">
         <div class="footer__wrap">
-          <div class="footer__row">
-            <div class="footer__col footer__col--left">
-              <div class="footer__copyright">&copy;&nbsp;Copyright 2019&nbsp;г.
-              </div>
-            </div>
-            <div class="footer__col footer__col--right">
-              <div class="footer__madein">Сделанo в
-                <a title="Sheer" href="https://sheer82.ru/">
-                  <svg>
-                    <use xlink:href="./assets/images/sprites/sprite.svg#sheer"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
+          <div class="footer__copyright">&copy;&nbsp;Copyright 2019&nbsp;г.
+          </div>
+          <div class="footer__madein">Сделанo в
+            <a title="Sheer" href="https://sheer82.ru/">
+              <svg>
+                <use xlink:href="./assets/images/sprites/sprite.svg#sheer"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </div>

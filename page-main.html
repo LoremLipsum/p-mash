@@ -12,30 +12,34 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header__top js-top-header">
+    <header class="header js-header">
+      <div class="header__top js-header-top">
         <div class="header__wrap">
-          <div class="header__top-inner">
-            <div class="header__top-column">
-              <button class="btn-nav header__button-nav js-open-nav" aria-label="Открыть меню" type="button">
-                <span class="btn-nav__icon">
-                  <span class="btn-nav__lines">
-                  </span>
+          <div class="header__top-column">
+            <button class="btn-nav header__button-nav js-open-nav" aria-label="Открыть меню" type="button">
+              <span class="btn-nav__icon">
+                <span class="btn-nav__lines">
                 </span>
-              </button>
-            </div>
-            <a class="logo logo--small header__logo-small">
-              <img class="logo__image" src="./assets/images/logo-small.svg" alt=" ">
-            </a>
-            <div class="header__top-column">
-              <ul class="header__list header__list--top">
-                <li class="header__item header__item--search">
-                  <button class="button-icon button-icon--bg-gray js-search-sm-open" title="Поиск" type="button">
-                    <svg class="button-icon__icon">
-                      <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
-                    </svg>
+              </span>
+            </button>
+          </div>
+          <a class="logo logo--small header__logo-small js-logo-small">
+            <img class="logo__image" src="./assets/images/logo-small.svg" alt=" ">
+          </a>
+          <div class="header__top-column">
+            <ul class="header__list header__list--top">
+              <li class="header__item">
+                <button class="button-icon button-icon--bg-gray js-search-sm-open" title="Поиск" type="button">
+                  <svg class="button-icon__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                  </svg>
+                </button>
+                <div class="header__search-wrap js-search-sm">
+                  <button class="button-close header__search-close js-close-search" aria-label="Закрыть окно" type="button">
+                    <span class="button-close__icon">
+                    </span>
                   </button>
-                  <div class="search header__search js-search-sm">
+                  <div class="search header__search">
                     <form action="/" method="post" accept-charset="UTF-8">
                       <input class="search__field" placeholder="Поиск" type="search">
                       <button class="button-icon button-icon--bg-gray search__button js-search-submit" type="button">
@@ -45,16 +49,16 @@
                       </button>
                     </form>
                   </div>
-                </li>
-                <li class="header__item">
-                  <button class="button-icon button-icon--bg-primary js-callback-button" title="Позвонить" type="button">
-                    <svg class="button-icon__icon">
-                      <use xlink:href="./assets/images/sprites/sprite.svg#phone"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+              <li class="header__item">
+                <button class="button-icon button-icon--bg-primary js-callback-button" title="Позвонить" type="button">
+                  <svg class="button-icon__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#phone"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -115,13 +119,33 @@
                 <a class="main-nav__link" href="page-about.html" itemprop="url">О компании
                 </a>
               </li>
-              <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" href="page-equipment.html" itemprop="url">Оборудование
-                </a>
+              <li class="main-nav__item main-nav__item--lvl-2 js-main-nav-dropdown" itemprop="name">
+                <button class="main-nav__link js-main-nav-dropdown-button" type="button" itemprop="url">Оборудование
+                </button>
+                <ul class="main-nav-lvl-2 main-nav__lvl-2">
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Оборудование собственного производства
+                    </a>
+                  </li>
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Импортное оборудование
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" href="page-service.html" itemprop="url">Услуги
-                </a>
+              <li class="main-nav__item main-nav__item--lvl-2 js-main-nav-dropdown" itemprop="name">
+                <button class="main-nav__link js-main-nav-dropdown-button" type="button" itemprop="url">Услуги
+                </button>
+                <ul class="main-nav-lvl-2 main-nav__lvl-2">
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Оборудование собственного производства
+                    </a>
+                  </li>
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Импортное оборудование
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="main-nav__item" itemprop="name">
                 <a class="main-nav__link" href="page-news.html" itemprop="url">Новости
@@ -160,111 +184,546 @@
         <button class="button-down heading__button-down js-button-down" type="button" hidden>
         </button>
       </section>
-      <div class="catalog js-down">
-        <div class="catalog__wrap">
-          <div class="catalog__inner">
-            <div class="catalog-nav catalog__nav">
-              <h2 class="catalog-nav__heading">Каталог</h2>
-              <div class="catalog-nav__button js-catalog-nav-button">Меню
-                <span class="control control--down catalog-nav__control">
-                </span>
-              </div>
+      <section class="catalog-main js-tabs js-down">
+        <div class="catalog-main__wrap">
+          <h2 class="catalog-main__heading">Каталог
+          </h2>
+          <div class="catalog-main__row">
+            <div class="catalog-nav catalog-main__nav js-catalog-nav">
               <ul class="catalog-nav__list">
-                <li class="catalog-nav__item active">
-                  <a class="catalog-nav__link" href="#">Автоматические закаточные машины
-                  </a>
+                <li class="catalog-nav__item active js-show-item">
+                  <button class="catalog-nav__link js-tabs-button" type="button" data-tab="tab-1">Автоматические закаточные машины
+                  </button>
                 </li>
-                <li class="catalog-nav__item">
-                  <a class="catalog-nav__link" href="#">Полуавтоматические закаточные машины
-                  </a>
+                <li class="catalog-nav__item js-show-item">
+                  <button class="catalog-nav__link js-tabs-button" type="button" data-tab="tab-2">Полуавтоматические закаточные машины
+                  </button>
                 </li>
-                <li class="catalog-nav__item">
-                  <a class="catalog-nav__link" href="#">Укупорочные машины
-                  </a>
+                <li class="catalog-nav__item js-show-item">
+                  <button class="catalog-nav__link js-tabs-button" type="button" data-tab="tab-3">Укупорочные машины
+                  </button>
                 </li>
-                <li class="catalog-nav__item">
-                  <a class="catalog-nav__link" href="#">Агрегаты дозировочно-закаточные
-                  </a>
+                <li class="catalog-nav__item js-show-item">
+                  <button class="catalog-nav__link js-tabs-button" type="button" data-tab="tab-4">Агрегаты дозировочно-закаточные
+                  </button>
                 </li>
-                <li class="catalog-nav__item">
-                  <a class="catalog-nav__link" href="#">Дозировочно-наполнительные машины
-                  </a>
+                <li class="catalog-nav__item js-show-item">
+                  <button class="catalog-nav__link js-tabs-button" type="button" data-tab="tab-5">Дозировочно-наполнительные машины
+                  </button>
                 </li>
-                <li class="catalog-nav__item">
-                  <a class="catalog-nav__link" href="#">Запчасти для закаточных машин
-                  </a>
+                <li class="catalog-nav__item js-show-item">
+                  <button class="catalog-nav__link js-tabs-button" type="button" data-tab="tab-6">Запчасти для закаточных машин
+                  </button>
                 </li>
-                <li class="catalog-nav__item">
-                  <a class="catalog-nav__link" href="#">Импортное оборудование
-                  </a>
+                <li class="catalog-nav__item js-show-item">
+                  <button class="catalog-nav__link js-tabs-button" type="button" data-tab="tab-7">Импортное оборудование
+                  </button>
                 </li>
               </ul>
+              <div class="catalog-nav__button js-show-button">Смотреть больше
+              </div>
             </div>
-            <div class="catalog-slider catalog__slider js-catalog-slider">
-              <div class="catalog-slider__item">
-                <div class="catalog-item">
-                  <div class="catalog-item__inner">
-                    <a class="catalog-item__image-wrap" href="#">
-                      <img class="catalog-item__image" src="./assets/upload/catalog-item01.jpg" alt="Фото оборудования">
-                    </a>
-                    <div class="catalog-item__content">
-                      <h4 class="catalog-item__heading">
-                        <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-К3К-79
+            <div class="catalog-main__main">
+              <div class="tab-1 js-tabs-content active">
+                <div class="catalog-slider js-catalog-slider">
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item01.jpg" alt="Фото оборудования">
                         </a>
-                      </h4>
-                      <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
-                      </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-К3К-79
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автоматическая вакуумзакаточная машина Б4-КЗК-84А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item03.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="catalog-slider__item">
-                <div class="catalog-item">
-                  <div class="catalog-item__inner">
-                    <a class="catalog-item__image-wrap" href="#">
-                      <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
-                    </a>
-                    <div class="catalog-item__content">
-                      <h4 class="catalog-item__heading">
-                        <a class="catalog-item__link" href="#">Автоматическая вакуумзакаточная машина Б4-КЗК-84А
+              <div class="tab-2 js-tabs-content">
+                <div class="catalog-slider js-catalog-slider">
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item03.jpg" alt="Фото оборудования">
                         </a>
-                      </h4>
-                      <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
-                      </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-К3К-79
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автоматическая вакуумзакаточная машина Б4-КЗК-84А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item01.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="catalog-slider__item">
-                <div class="catalog-item">
-                  <div class="catalog-item__inner">
-                    <a class="catalog-item__image-wrap" href="#">
-                      <img class="catalog-item__image" src="./assets/upload/catalog-item03.jpg" alt="Фото оборудования">
-                    </a>
-                    <div class="catalog-item__content">
-                      <h4 class="catalog-item__heading">
-                        <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+              <div class="tab-3 js-tabs-content">
+                <div class="catalog-slider js-catalog-slider">
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
                         </a>
-                      </h4>
-                      <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
-                      </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-К3К-79
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item01.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автоматическая вакуумзакаточная машина Б4-КЗК-84А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item03.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="catalog-slider__item">
-                <div class="catalog-item">
-                  <div class="catalog-item__inner">
-                    <a class="catalog-item__image-wrap" href="#">
-                      <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
-                    </a>
-                    <div class="catalog-item__content">
-                      <h4 class="catalog-item__heading">
-                        <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+              <div class="tab-4 js-tabs-content">
+                <div class="catalog-slider js-catalog-slider">
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item03.jpg" alt="Фото оборудования">
                         </a>
-                      </h4>
-                      <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
-                      </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-К3К-79
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автоматическая вакуумзакаточная машина Б4-КЗК-84А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item01.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-5 js-tabs-content">
+                <div class="catalog-slider js-catalog-slider">
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item01.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-К3К-79
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автоматическая вакуумзакаточная машина Б4-КЗК-84А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item03.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-6 js-tabs-content">
+                <div class="catalog-slider js-catalog-slider">
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-К3К-79
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item01.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автоматическая вакуумзакаточная машина Б4-КЗК-84А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item03.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-7 js-tabs-content">
+                <div class="catalog-slider js-catalog-slider">
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item01.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-К3К-79
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автоматическая вакуумзакаточная машина Б4-КЗК-84А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item03.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-slider__item">
+                    <div class="catalog-item">
+                      <div class="catalog-item__inner">
+                        <a class="catalog-item__image-wrap" href="#">
+                          <img class="catalog-item__image" src="./assets/upload/catalog-item02.jpg" alt="Фото оборудования">
+                        </a>
+                        <div class="catalog-item__content">
+                          <h4 class="catalog-item__heading">
+                            <a class="catalog-item__link" href="#">Автомат закаточный для металлических банок Б4-КЗК-80А
+                            </a>
+                          </h4>
+                          <a class="button button--small button--bg-primary catalog-item__button" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -272,11 +731,11 @@
             </div>
           </div>
         </div>
-      </div>
-      <section class="writeus">
+      </section>
+      <div class="writeus">
         <div class="writeus__wrap">
-          <h2 class="writeus__heading">Напишите нам
-          </h2>
+          <div class="writeus__heading">Напишите нам
+          </div>
           <form action="/" method="post" accept-charset="UTF-8">
             <div class="writeus__row">
               <div class="writeus__field-group">
@@ -332,7 +791,7 @@
             </div>
           </form>
         </div>
-      </section>
+      </div>
       <section class="features">
         <div class="features__wrap">
           <h2 class="hidden">Наши преимущества</h2>
@@ -531,113 +990,105 @@
     <footer class="footer">
       <div class="footer__top">
         <div class="footer__wrap">
-          <div class="footer__inner">
-            <div class="footer__row footer__row--company">
-              <div class="footer__col footer__col--left">
-                <a class="logo logo--secondary footer__logo">
-                  <img class="logo__image" src="./assets/images/logo-secondary.svg" alt=" ">
-                </a>
-                <p class="footer__text footer__text--info">Производство технологического <br>оборудования <br>для консервных производств
-                </p>
-              </div>
-              <div class="footer__col footer__col--right">
-                <p class="footer__text">
-                  <a class="header__phone" href="tel:+79295407124">+7 (929) 540-71-24
-                  </a>
-                  <a class="header__phone" href="tel:+74992816944">+7 (499) 281-69-44
-                  </a>
-                </p>
-                <p class="footer__text footer__text--address">140060, Московская обл., <br>Люберецкий р-н., ул. Ленина, 52, оф.&nbsp;324
-                </p>
-                <p class="footer__text">
-                  <a href="mailto:tdpmts2016@mail.ru">tdpmts2016@mail.ru
-                  </a>
-                </p>
-              </div>
+          <div class="footer__company">
+            <div class="footer__info">
+              <a class="logo logo--secondary footer__logo">
+                <img class="logo__image" src="./assets/images/logo-secondary.svg" alt=" ">
+              </a>
+              <p class="footer__text footer__text--info">Производство технологического <br>оборудования <br>для консервных производств
+              </p>
             </div>
-            <div class="footer__row footer__row--nav">
-              <div class="footer__col footer__col--left" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                <h4 class="footer__title">Компания</h4>
-                <ul class="footer__list">
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">О компании
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Производство
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Услуги
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Новости
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Статьи
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Контакты
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer__col footer__col--right" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                <h4 class="footer__title">Оборудование</h4>
-                <ul class="footer__list">
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Автоматические закаточные машины
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Полуавтоматические закаточные машины
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Укупорочные машины
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Агрегаты дозировочно-закаточные
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Дозировочно-наполнительные машины
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Запчасти для закаточных машин
-                    </a>
-                  </li>
-                  <li class="footer__item" itemprop="name">
-                    <a href="#" itemprop="url">Импортное оборудование
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div class="footer__address">
+              <p class="footer__text">
+                <a class="header__phone" href="tel:+79295407124">+7 (929) 540-71-24
+                </a>
+                <a class="header__phone" href="tel:+74992816944">+7 (499) 281-69-44
+                </a>
+              </p>
+              <p class="footer__text footer__text--address">140060, Московская обл., <br>Люберецкий р-н., ул. Ленина, 52, оф.&nbsp;324
+              </p>
+              <p class="footer__text">
+                <a href="mailto:tdpmts2016@mail.ru">tdpmts2016@mail.ru
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="footer__nav" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--company js-footer-nav-dropdown">
+              <h4 class="footer__title js-footer-nav-dropdown-button">Компания</h4>
+              <ul class="footer__list">
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">О компании
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Производство
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Услуги
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Новости
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Статьи
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--equipment js-footer-nav-dropdown">
+              <h4 class="footer__title js-footer-nav-dropdown-button">Оборудование</h4>
+              <ul class="footer__list">
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Автоматические закаточные машины
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Полуавтоматические закаточные машины
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Укупорочные машины
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Агрегаты дозировочно-закаточные
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Дозировочно-наполнительные машины
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Запчасти для закаточных машин
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Импортное оборудование
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="footer__bottom">
         <div class="footer__wrap">
-          <div class="footer__row">
-            <div class="footer__col footer__col--left">
-              <div class="footer__copyright">&copy;&nbsp;Copyright 2019&nbsp;г.
-              </div>
-            </div>
-            <div class="footer__col footer__col--right">
-              <div class="footer__madein">Сделанo в
-                <a title="Sheer" href="https://sheer82.ru/">
-                  <svg>
-                    <use xlink:href="./assets/images/sprites/sprite.svg#sheer"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
+          <div class="footer__copyright">&copy;&nbsp;Copyright 2019&nbsp;г.
+          </div>
+          <div class="footer__madein">Сделанo в
+            <a title="Sheer" href="https://sheer82.ru/">
+              <svg>
+                <use xlink:href="./assets/images/sprites/sprite.svg#sheer"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </div>

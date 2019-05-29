@@ -1,9 +1,12 @@
 .content {
-  padding-top: 45px;
-  padding-bottom: 30px;
+  padding-top: 35px;
 
-  &--no-pads-bottom {
+  &--news-list {
     padding-bottom: 0 !important;
+
+    .content__wrap {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -12,17 +15,18 @@
 }
 
 .content__breadcrumbs {
-  margin-top: -35px;
+  margin-top: -20px;
   margin-bottom: 20px;
 }
 
 .content__heading {
-  margin-bottom: 30px;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .content__pagination {
-  margin-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .content__button-bottom-wrap {
@@ -34,6 +38,10 @@
   width: 100%;
 }
 
+.content__catalog {
+  margin-top: -15px;
+}
+
 @include respond-to(small-lg) {
   .content__heading {
     text-align: left;
@@ -43,7 +51,16 @@
 @include respond-to(medium) {
   .content {
     padding-top: 55px;
-    padding-bottom: 40px;
+
+    &--news-list {
+      .content__wrap {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .content__breadcrumbs {
+    margin-top: -35px;
   }
 
   .content__heading {
@@ -53,13 +70,19 @@
 
   .content__pagination {
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
 @include respond-to(large) {
   .content {
     padding-top: 65px;
-    padding-bottom: 50px;
+
+    &--news-list {
+      .content__wrap {
+        margin-bottom: 50px;
+      }
+    }
   }
 
   .content__heading {
@@ -68,5 +91,6 @@
 
   .content__pagination {
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 }

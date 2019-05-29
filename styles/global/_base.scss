@@ -35,6 +35,7 @@ html {
 
 @include respond-to(large) {
   body {
+    padding-top: 163px;
     font-size: 16px;
   }
 }
