@@ -1,7 +1,6 @@
 @import "../assets/fonts/gothampro/gothampro";
 @import "./libs/normalize";
 @import "./libs/slick";
-@import "./libs/animate";
 @import "./global/vars";
 @import "./global/functions";
 @import "./global/mixins/mixins";
@@ -31,8 +30,8 @@
 @import "../pug/blocks/social/social";
 @import "../pug/blocks/search/search";
 @import "../pug/blocks/callback/callback";
-@import "../pug/blocks/form/form";
 @import "../pug/blocks/field/field";
+@import "../pug/blocks/form/form";
 @import "../pug/blocks/date/date";
 @import "../pug/blocks/process-item/process-item";
 @import "../pug/blocks/process/process";

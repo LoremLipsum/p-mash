@@ -7,20 +7,20 @@
   if(map) {
     ymaps.ready(function () {
       var map = new ymaps.Map('map', {
-        center: [55.612934, 37.972380],
+        center: [55.694429, 37.874302],
         zoom: 18,
         scrollZoom: false,
         controls: []
       }, {
         searchControlProvider: 'yandex#search'
       }),
-      Placemark = new ymaps.Placemark([55.612934, 37.972380], {
-        balloonContent: '140060, Московская обл., Люберецкий р-н., ул. Ленина, 52, оф. 324'
+      Placemark = new ymaps.Placemark([55.694429, 37.874302], {
+        balloonContent: '140060, Московская обл., Люберецкий р-н., ул. Ленина, 52'
       }, {
         iconLayout: 'default#image',
         iconImageHref: 'assets/images/pin-icon.png',
         iconImageSize: [30, 40],
-        iconImageOffset: [-15, -40],
+        iconImageOffset: [-15, -50],
       });
 
       map.geoObjects.add(Placemark);
