@@ -1,8 +1,9 @@
 (function($) {
 	'use strict';
 	$(function() {
+
     var btns = $('.js-show-button');
-    var WIDTH = 880
+    var WIDTH = 880;
 
     if (btns.length) {
       var items = '.js-show-item';

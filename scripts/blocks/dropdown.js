@@ -1,6 +1,7 @@
 (function($) {
 	'use strict';
 	$(function() {
+
     var btnsFooter = $('.js-footer-nav-dropdown-button');
     var btnsMainNav = $('.js-main-nav-dropdown-button');
     var btn;

@@ -39,6 +39,5 @@
       initScroll();
     });
 
-
   });
 })(jQuery);
