@@ -1,0 +1,20 @@
+mixin lead(data)
+    +el({
+        class: 'lead',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'lead__image-wrap',
+        })
+            +el({
+                tag: 'img',
+                class: 'lead__image',
+                image: data.image,
+                alt: 'Фото конвейера с продукцией'
+            })
+        +el({
+            class: 'lead__text',
+            text: data.text,
+        })

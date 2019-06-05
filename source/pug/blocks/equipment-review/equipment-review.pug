@@ -1,0 +1,46 @@
+mixin equipment-review(data)
+    +el({
+        class: 'equipment-review',
+        mix: data.mix,
+        js: data.js,
+        mod: data.mod,
+    })&attributes(attributes)
+        .equipment-review__wrap
+            aside.equipment-review__aside
+                +catalog-nav({
+                    mix: 'catalog__nav',
+                    js: 'catalog-nav'
+                })
+                    +catalog-nav-link({
+                        text: 'Автоматические закаточные машины',
+                        js: 'show-item',
+                        mix: 'active'
+                    })
+                    +catalog-nav-link({
+                        text: 'Полуавтоматические закаточные машины',
+                        js: 'show-item',
+                    })
+                    +catalog-nav-link({
+                        text: 'Укупорочные машины',
+                        js: 'show-item',
+                    })
+                    +catalog-nav-link({
+                        text: 'Агрегаты дозировочно-закаточные',
+                        js: 'show-item',
+                    })
+                    +catalog-nav-link({
+                        text: 'Дозировочно-наполнительные машины',
+                        js: 'show-item',
+                    })
+                    +catalog-nav-link({
+                        text: 'Запчасти для закаточных машин',
+                        js: 'show-item',
+                    })
+
+            .equipment-review__main
+                +equipment-info({
+                    mix: 'equipment-review__info'
+                })
+                +equipment-descr({
+                    mix: 'equipment-review__descr'
+                })

@@ -1,0 +1,30 @@
+mixin about-features(data)
+    +el({
+        tag: 'section',
+        class: 'about-features',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .about-features__wrap
+            h3.about-features__heading Мы оказываем услуги:
+            svg.hidden(xmlns="http://www.w3.org/2000/svg" )
+                defs
+                    filter#filtersPicture
+                        feComposite(result="inputTo_38" in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0")
+                        feColorMatrix(type="saturate" values="0" data-filterid="38")
+            +el({
+                tag: 'ul',
+                class: 'about-features__list',
+            })
+                each item, index in aboutFeatures
+                    +el({
+                        tag: 'li',
+                        class: 'about-features__item',
+                    })
+                        +features-item({
+                            mod: item.mod,
+                            text: item.text,
+                            style: item.style,
+                            image: item.image
+                        })

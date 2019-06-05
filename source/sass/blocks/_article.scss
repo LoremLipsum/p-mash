@@ -6,6 +6,36 @@
     display: inline-block;
     border: 1px solid color(light-border);
   }
+
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  li {
+    margin: 0;
+    margin-bottom: mb(sm);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include respond-to(medium) {
+  .article {
+    ul,
+    ol {
+      margin-bottom: mb(md);
+    }
+  }
 }
 
 @include respond-to(medium-lg) {
@@ -24,6 +54,9 @@
 
 @include respond-to(large) {
   .article {
-
+    ul,
+    ol {
+      margin-bottom: mb(lg);
+    }
   }
 }

@@ -7,7 +7,12 @@ mixin catalog(data)
         mod: data.mod,
     })&attributes(attributes)
         .catalog__wrap
-            h2.catalog__subheading Оборудование собственного производства
+            if data.subheading
+                +el({
+                    tag: 'h2',
+                    class: 'catalog__subheading',
+                    text: data.subheading
+                })
             .catalog__aside-main-wrap
                 aside.catalog__aside
                     +catalog-nav({
@@ -40,7 +45,4 @@ mixin catalog(data)
                             js: 'show-item',
                         })
                 .catalog__main
-                    +catalog-list({
-                        items: catalog,
-                        mix: 'catalog__list',
-                    })
+                    block

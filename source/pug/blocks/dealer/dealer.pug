@@ -1,0 +1,30 @@
+mixin dealer(data)
+    +el({
+        tag: 'section',
+        class: 'dealer',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .dealer__wrap
+            +el({
+                tag: 'h3',
+                class: 'dealer__heading',
+                text: data.heading
+            })
+            +el({
+                tag: 'ul',
+                class: 'dealer__list',
+            })
+                each item, index in data.items
+                    +el({
+                        tag: 'li',
+                        class: 'dealer__item',
+                    })
+                        +dealer-item({
+                            mod: item.mod,
+                            heading: item.heading,
+                            text: item.text,
+                            style: item.style,
+                            image: item.image
+                        })

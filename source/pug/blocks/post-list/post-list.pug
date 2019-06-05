@@ -1,0 +1,17 @@
+mixin post-list-item(data)
+    .post-list__item
+        +post({
+            heading: data.heading,
+            mod: data.mod,
+        })
+            block
+
+
+mixin post-list(data)
+    +el({
+        class: 'post-list',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        block

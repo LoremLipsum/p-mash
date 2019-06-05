@@ -1,0 +1,28 @@
+mixin item-w-arrow(data)
+    +el({
+        tag: data.tag,
+        class: 'item-w-arrow',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .item-w-arrow__wrap
+            +el({
+                tag: 'b',
+                class: 'item-w-arrow__title',
+                text: data.heading,
+            })
+            if data.text
+                +el({
+                    tag: 'p',
+                    class: 'item-w-arrow__text',
+                    text: data.text,
+                })
+            +el({
+                tag: 'span',
+                class: 'item-w-arrow__arrow-wrap',
+            })
+                +el({
+                    tag: 'span',
+                    class: 'item-w-arrow__arrow',
+                })

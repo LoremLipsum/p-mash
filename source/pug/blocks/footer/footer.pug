@@ -106,9 +106,10 @@ mixin footer(data)
                 })
                 .footer__madein
                     | Сделанo в
+                    span.hidden
+                        | Sheer
                     +el({
                         tag: 'a',
-                        title: 'Sheer',
                         href: 'https://sheer82.ru/'
                     })
                         +el({

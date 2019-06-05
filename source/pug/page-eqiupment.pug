@@ -8,10 +8,14 @@ block content
     main.content
         .content__wrap
             h1.content__heading Оборудование
-
         +catalog({
             mix: 'content__catalog',
+            subheading: 'Оборудование собственного производства',
         })
+            +catalog-list({
+                items: catalog,
+                mix: 'catalog__list',
+            })
         +writeus({
             heading: 'Напишите нам',
             submit: 'Проконсультироваться',

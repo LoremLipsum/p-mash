@@ -1,4 +1,6 @@
 .content {
+  display: flex;
+  flex-direction: column;
   padding-top: 35px;
 
   &--news-list {
@@ -16,7 +18,7 @@
 
 .content__breadcrumbs {
   margin-top: -20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .content__heading {
@@ -24,9 +26,63 @@
   margin-bottom: 30px;
 }
 
+.content__two-column {
+  margin-bottom: 30px;
+
+  h2 {
+    page-break-before: always;
+    page-break-after: avoid;
+  }
+
+  h3, h4 {
+    page-break-after: avoid;
+  }
+
+  p {
+    break-inside: auto;
+  }
+
+  blockquote {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--text-justify {
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hyphenate-limit-chars: 6 4 4;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-last: always;
+    hyphenate-limit-zone: 8%;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
 .content__pagination {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .content__button-bottom-wrap {
@@ -40,6 +96,30 @@
 
 .content__catalog {
   margin-top: -15px;
+}
+
+.content__lead {
+  margin-bottom: 30px;
+}
+
+.content__posts {
+  margin-bottom: 30px;
+}
+
+.content__about-intro {
+  margin-bottom: 30px;
+}
+
+.content__about-prod {
+  margin-bottom: 30px;
+}
+
+.content__about-lead {
+  margin-bottom: 30px;
+}
+
+.content__about-features {
+  margin-bottom: 30px;
 }
 
 @include respond-to(small-lg) {
@@ -72,6 +152,36 @@
     margin-top: 40px;
     margin-bottom: 40px;
   }
+
+  .content__two-column {
+    margin-bottom: 35px;
+    column-count: 2;
+    column-gap: 30px;
+  }
+
+  .content__lead {
+    margin-bottom: 60px;
+  }
+
+  .content__posts {
+    margin-bottom: 60px;
+  }
+
+  .content__about-intro {
+    margin-bottom: 40px;
+  }
+
+  .content__about-prod {
+    margin-bottom: 50px;
+  }
+
+  .content__about-lead {
+    margin-bottom: 40px;
+  }
+
+  .content__about-features {
+    margin-bottom: 40px;
+  }
 }
 
 @include respond-to(large) {
@@ -89,8 +199,36 @@
     margin-bottom: 50px;
   }
 
+  .content__two-column {
+    margin-bottom: 40px;
+  }
+
   .content__pagination {
     margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .content__lead {
+    margin-bottom: 110px;
+  }
+
+  .content__posts {
+    margin-bottom: 70px;
+  }
+
+  .content__about-intro {
+    margin-bottom: 50px;
+  }
+
+  .content__about-prod {
+    margin-bottom: 70px;
+  }
+
+  .content__about-lead {
+    margin-bottom: 50px;
+  }
+
+  .content__about-features {
     margin-bottom: 50px;
   }
 }

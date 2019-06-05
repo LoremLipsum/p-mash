@@ -1,0 +1,35 @@
+.teaser {
+  background-color: color(primary);
+}
+
+.teaser__wrap {
+  @include wrapper;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.teaser__text {
+  font-size: 16px;
+  font-weight: 500;
+  color: color(white);
+  text-align: center;
+  @include first-last;
+}
+
+@include respond-to(medium) {
+  .teaser__wrap {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .teaser__text {
+    font-size: 17px;
+  }
+}
+
+@include respond-to(large) {
+  .teaser__text {
+    padding: 0 100px;
+    font-size: 18px;
+  }
+}

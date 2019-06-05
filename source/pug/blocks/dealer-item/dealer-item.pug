@@ -1,0 +1,20 @@
+mixin dealer-item(data)
+    +el({
+        class: 'dealer-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'dealer-item__name',
+            before: {
+                tag: 'a',
+                class: 'dealer-item__name-link',
+                target: '_blank',
+                text: data.heading,
+            }
+        })
+        +el({
+            class: 'dealer-item__text',
+            text: data.text,
+        })

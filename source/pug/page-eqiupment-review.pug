@@ -1,0 +1,21 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Продмаш'
+    //- - var pageId = 2
+
+block content
+    main.content
+        .content__wrap
+            +breadcrumbs({
+                mix: 'content__breadcrumbs',
+                items: ['Главная','Оборудование', 'Оброрудование собственногo производства', 'Автоматические закаточные машины']
+            })
+        +equipment-review({
+            mix: 'content__equipment-review',
+        })
+
+        +writeus({
+            heading: 'Напишите нам',
+            submit: 'Проконсультироваться',
+        })

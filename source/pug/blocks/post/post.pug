@@ -1,0 +1,14 @@
+mixin post(data)
+    +el({
+        tag: 'article',
+        class: 'post',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'h3',
+            class: 'post__heading',
+            text: data.heading,
+        })
+        block

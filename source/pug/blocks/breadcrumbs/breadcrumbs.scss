@@ -25,16 +25,11 @@
 }
 
 .breadcrumbs__link {
-  position: relative;
-  display: block;
-  padding-right: 12px;
+  display: inline;
   text-decoration: none;
 
   &::after {
-    content: "\2022";
-    position: absolute;
-    right: 0;
-    top: 0;
+    content: " \2022";
   }
 
   @include hover {

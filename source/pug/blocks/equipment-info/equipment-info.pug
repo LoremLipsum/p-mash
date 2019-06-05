@@ -1,0 +1,35 @@
+mixin equipment-info(data)
+    +el({
+        tag: 'section',
+        class: 'equipment-info',
+        mix: data.mix,
+        js: data.js,
+        mod: data.mod,
+    })&attributes(attributes)
+        .equipment-info__row
+            .equipment-info__column
+                .equipment-info__image-wrap
+                    +el({
+                        tag: 'img',
+                        class: 'equipment-info__image',
+                        alt: 'Фото оборудования',
+                        upload: 'image02.jpg',
+                    })
+            .equipment-info__column.equipment-info__column--text
+                .equipment-info__text-wrap
+                    h1.equipment-info__heading Автомат закаточный для металлических банок Б4-К3К-79
+                    p.equipment-info__description.
+                        Б4-КЗК-79А — автоматическая закаточная машина типа. Она предназначена для герметичного методом
+                        обкатки наполненных металли- ческих банок по ГОСТ 5981 на предприятиях промышленности.
+                    p.equipment-info__text.
+                        По специальному заказу она может нал закаты- вание банок с легко открываемыми кркартонно-металлической тары,
+                        а тонкой жести толщиной от 0,16 мм. В зависимости от исполнения, производитель регулируется
+                        ступенчато — заменой шкивов, ил помощи частотного преобразователя. В посл изменение производительности
+                        может осущ пульта управления без остановки машины.
+                .equipment-info__button-wrap
+                    +button({
+                        tag: 'a',
+                        mod: ['small', 'bg-primary'],
+                        text: 'Заказать',
+                        mix: 'equipment-info__button',
+                    })

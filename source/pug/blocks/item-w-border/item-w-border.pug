@@ -1,0 +1,10 @@
+mixin item-w-border(data)
+    +el({
+        tag: data.tag,
+        class: 'item-w-border',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)
+        block
