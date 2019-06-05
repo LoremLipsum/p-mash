@@ -1,0 +1,72 @@
+.dealer-item {
+
+}
+
+.dealer-item__name {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.dealer-item__name-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: inherit;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: color(primary);
+    opacity: 1;
+    transition: duration(md) func(primary);
+  }
+
+  @include hover {
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+.dealer-item__text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  @include first-last;
+}
+
+.dealer-item__link {
+  color: color(primary);
+  text-decoration: underline;
+  text-decoration-color: rgba(color(primary), 0.4);
+  transition: duration(md) func(primary);
+
+  @include hover {
+    text-decoration-color: transparent;
+  }
+}
+
+@include respond-to(medium) {
+  .dealer-item__name {
+    padding-bottom: 10px;
+    font-size: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .dealer-item__name {
+    padding-bottom: 10px;
+    font-size: 36px;
+  }
+}

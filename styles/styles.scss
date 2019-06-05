@@ -9,9 +9,7 @@
 @import "./global/animation";
 @import "./global/helpers";
 @import "./global/js";
-@import "./blocks/article";
 @import "./blocks/sticky-footer";
-@import "./blocks/content";
 @import "../pug/blocks/checkbox/checkbox";
 @import "../pug/blocks/phone/phone";
 @import "../pug/blocks/overlay/overlay";
@@ -30,6 +28,8 @@
 @import "../pug/blocks/social/social";
 @import "../pug/blocks/search/search";
 @import "../pug/blocks/callback/callback";
+@import "../pug/blocks/lead/lead";
+@import "../pug/blocks/lead-w-text/lead-w-text";
 @import "../pug/blocks/field/field";
 @import "../pug/blocks/form/form";
 @import "../pug/blocks/date/date";
@@ -60,3 +60,22 @@
 @import "../pug/blocks/header/header";
 @import "../pug/blocks/intro/intro";
 @import "../pug/blocks/footer/footer";
+@import "../pug/blocks/equipment-info/equipment-info";
+@import "../pug/blocks/equipment-descr/equipment-descr";
+@import "../pug/blocks/equipment-review/equipment-review";
+@import "../pug/blocks/post-list/post-list";
+@import "../pug/blocks/post/post";
+@import "../pug/blocks/about-intro/about-intro";
+@import "../pug/blocks/item-w-border/item-w-border";
+@import "../pug/blocks/about-descr/about-descr";
+@import "../pug/blocks/item-w-arrow/item-w-arrow";
+@import "../pug/blocks/about-prod/about-prod";
+@import "../pug/blocks/about-lead/about-lead";
+@import "../pug/blocks/about-service/about-service";
+@import "../pug/blocks/about-features/about-features";
+@import "./blocks/article";
+@import "./blocks/content";
+
+@import "../pug/blocks/dealer/dealer";
+@import "../pug/blocks/dealer-item/dealer-item";
+@import "../pug/blocks/teaser/teaser";

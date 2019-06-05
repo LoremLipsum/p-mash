@@ -1,0 +1,28 @@
+.item-w-border {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  border: 2px solid color(primary);
+  border-radius: radius(md);
+  background-color: color(light);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  @include first-last;
+}
+
+@include respond-to(medium) {
+  .item-w-border {
+    padding: 30px 20px;
+    font-size: 15px;
+  }
+}
+
+@include respond-to(large) {
+  .item-w-border {
+    padding: 50px 40px;
+    font-size: 16px;
+  }
+}

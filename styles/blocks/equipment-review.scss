@@ -1,0 +1,60 @@
+.equipment-review {
+  padding-bottom: 40px;
+}
+
+.equipment-review__wrap {
+  @include wrapper;
+}
+
+.equipment-review__aside {
+  margin-bottom: 20px;
+}
+
+.equipment-review__info {
+  margin-bottom: 30px;
+}
+
+@include respond-to(medium) {
+  .equipment-review {
+    padding-bottom: 50px;
+  }
+
+  .equipment-review__info {
+    margin-bottom: 50px;
+  }
+}
+
+@include respond-to(medium-lg) {
+  .equipment-review__wrap {
+    display: flex;
+  }
+
+  .equipment-review__aside {
+    width: 240px;
+    margin-left: 0;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .equipment-review__main {
+    width: calc(100% - 270px);
+  }
+}
+
+@include respond-to(large) {
+  .equipment-review {
+    padding-bottom: 60px;
+  }
+
+  .equipment-review__aside {
+    width: 270px;
+  }
+
+  .equipment-review__main {
+    width: calc(100% - 300px);
+  }
+
+  .equipment-review__info {
+    margin-bottom: 60px;
+  }
+}
