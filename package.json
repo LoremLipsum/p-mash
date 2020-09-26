@@ -65,7 +65,7 @@
   },
   "dependencies": {
     "imask": "^4.1.5",
-    "jquery": "^1.12.4",
+    "jquery": "^3.4.1",
     "jquery-gray": "^1.6.0",
     "normalize.css": "^8.0.1",
     "object-fit-images": "^3.2.4",
